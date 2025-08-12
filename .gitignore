@@ -15,7 +15,7 @@
 # production
 /build
 /dist
-
+*index.js.map
 # misc
 .DS_Store
 *.pem
