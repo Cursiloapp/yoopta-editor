@@ -1,0 +1,1 @@
+{"version":3,"file":"EmbedUploader.d.ts","sourceRoot":"","sources":["../../src/ui/EmbedUploader.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,OAAO,CAAC;AAItC,KAAK,KAAK,GAAG;IACX,cAAc,EAAE,aAAa,CAAC;IAC9B,IAAI,EAAE,GAAG,CAAC;IACV,OAAO,EAAE,MAAM,CAAC;IAChB,OAAO,EAAE,MAAM,IAAI,CAAC;CACrB,CAAC;AAIF,QAAA,MAAM,aAAa,+CAAgD,KAAK,4CA6BvE,CAAC;AAEF,OAAO,EAAE,aAAa,EAAE,CAAC"}
