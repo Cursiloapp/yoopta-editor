@@ -67,8 +67,9 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         });
       },
       handleComponent: {
-        left: <Resizer position="left" />,
-        right: <Resizer position="right" />,
+        // TODO: If ever need resizer, we can uncomment this
+        // left: <Resizer position="left" />,
+        // right: <Resizer position="right" />,
       },
     }),
     [sizes.width, sizes.height],

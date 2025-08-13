@@ -56,7 +56,7 @@ const NotionToolbar = (props: ToolbarRenderProps) => {
             </span>
             {modals.actionMenu && !!ActionMenu && (
               <FloatingPortal
-                id="yoo-custom-toolbar-action-menu-list-portal"
+                id="yoo-custom-toolbar-action-menu-list-portal text-[#000]"
                 root={document.getElementById('yoopta-editor')}
               >
                 <div style={actionMenuStyles} ref={actionMenuRefs.setFloating} onClick={(e) => e.stopPropagation()}>

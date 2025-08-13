@@ -332,7 +332,7 @@ const SlateEditorInstance = memo<SlateEditorInstanceProps>(
           key={`editable-${id}`}
           renderElement={renderElement}
           renderLeaf={renderLeaf}
-          className="yoopta-slate"
+          className="yoopta-slate w-full"
           spellCheck
           {...eventHandlers}
           onKeyDown={onKeyDown}
