@@ -37,7 +37,7 @@ const plugins = [
     elementProps: {
       divider: (props) => ({
         ...props,
-        color: '#007aff',
+        color: '#fe4a55',
       }),
     },
   }),

@@ -34,7 +34,7 @@ export function serializeTextNodes(nodes: any[]): string {
         const { url, target, rel } = node.props;
         const children = serializeTextNodes(node.children);
 
-        return `<a href="${url}" target="${target}" rel="${rel}" style="color: rgb(0 122 255);
+        return `<a href="${url}" target="${target}" rel="${rel}" style="color: oklch(0.6697 0.2155 22.0343);
                 cursor: pointer;
                 position: relative;
                 text-decoration-line: underline;
