@@ -27,7 +27,7 @@ const InputAltText = ({ floatingStyles, onClose, refs, value, onChange, onSave, 
             <div className="yoo-image-mt-2 yoo-image-flex yoo-image-justify-between">
               <button
                 type="button"
-                className="yoopta-button yoo-image-bg-[#1183ff] yoo-image-text-[#fff] yoo-image-text-sm yoo-image-font-medium yoo-image-py-[5px] yoo-image-px-[10px] yoo-image-rounded-md yoo-image-shadow-sm disabled:yoo-image-opacity-50"
+                className="yoopta-button yoo-image-bg-[#fe4a55] yoo-image-text-[#fff] yoo-image-text-sm yoo-image-font-medium yoo-image-py-[5px] yoo-image-px-[10px] yoo-image-rounded-md yoo-image-shadow-sm disabled:yoo-image-opacity-50"
                 disabled={!value}
                 onClick={onSave}
               >

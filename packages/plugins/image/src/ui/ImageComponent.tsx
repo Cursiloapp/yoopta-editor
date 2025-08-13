@@ -85,6 +85,7 @@ const ImageComponent = ({
           height={height}
           alt={alt || ''}
           decoding="async"
+          className='rounded-lg'
           loading="lazy"
           style={style}
           onClick={handleImageClick}

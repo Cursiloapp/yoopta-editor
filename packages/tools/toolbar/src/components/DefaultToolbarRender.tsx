@@ -97,7 +97,7 @@ const DefaultToolbarRender = ({ activeBlock, editor, toggleHoldToolbar }: Toolba
   });
 
   const getItemStyle = (type) => ({
-    backgroundColor: editor.formats[type]?.isActive() ? '#1183ff' : undefined,
+    backgroundColor: editor.formats[type]?.isActive() ? '#fe4a55' : undefined,
     color: editor.formats[type]?.isActive() ? '#fff' : undefined,
   });
 

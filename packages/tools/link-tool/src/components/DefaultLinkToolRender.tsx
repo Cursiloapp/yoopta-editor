@@ -118,7 +118,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
       <div className="yoo-link-tool-mt-2 yoo-link-tool-flex yoo-link-tool-justify-between">
         <button
           type="button"
-          className="yoopta-button yoo-link-tool-bg-[#1183ff] yoo-link-tool-text-[#fff] yoo-link-tool-text-sm yoo-link-tool-font-medium yoo-link-tool-py-[5px] yoo-link-tool-px-[10px] yoo-link-tool-rounded-md yoo-link-tool-shadow-sm disabled:yoo-link-tool-opacity-50"
+          className="yoopta-button yoo-link-tool-bg-[#fe4a55] yoo-link-tool-text-[#fff] yoo-link-tool-text-sm yoo-link-tool-font-medium yoo-link-tool-py-[5px] yoo-link-tool-px-[10px] yoo-link-tool-rounded-md yoo-link-tool-shadow-sm disabled:yoo-link-tool-opacity-50"
           disabled={!link.url}
           onClick={onSave}
         >

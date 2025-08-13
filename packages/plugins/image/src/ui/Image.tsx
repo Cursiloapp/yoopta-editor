@@ -94,7 +94,7 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     <div
       contentEditable={false}
       draggable={false}
-      className={`yoo-image-mt-4 yoo-image-relative yoo-image-flex ${alignClass} yoopta-image`}
+      className={`yoo-image-mt-4 yoo-image-relative yoo-image-flex ${alignClass} yoopta-image rounded-lg`}
     >
       <Resizable {...resizeProps} className="yoo-image-my-0 yoo-image-flex">
         {blockSelected && (

@@ -71,6 +71,11 @@
   @apply yoopta-button yoo-editor-cursor-pointer yoo-editor-rounded-[6px] yoo-editor-h-[24px] yoo-editor-flex yoo-editor-items-center yoo-editor-justify-center yoo-editor-bg-inherit yoo-editor-bg-transparent yoo-editor-transition-colors yoo-editor-duration-[180ms] yoo-editor-relative yoo-editor-w-[18px] yoo-editor-p-0 yoo-editor-text-[#37352f59] yoo-editor-m-[0_1px] hover:yoo-editor-bg-[#37362f14] focus:yoo-editor-bg-[#37362f14] active:yoo-editor-bg-[#37362f14] yoo-editor-w-[24px];
 }
 
+/* Dark mode support for block actions */
+.dark .yoopta-block-actions button {
+  color: #fff !important;
+}
+
 .yoopta-block-actions-drag {
   @apply yoopta-button yoo-editor-cursor-pointer yoo-editor-rounded-[6px] yoo-editor-h-[24px] yoo-editor-flex yoo-editor-items-center yoo-editor-justify-center yoo-editor-bg-inherit yoo-editor-bg-transparent yoo-editor-transition-colors yoo-editor-duration-[180ms] yoo-editor-relative yoo-editor-w-[18px] yoo-editor-p-0 yoo-editor-text-[#37352f59] yoo-editor-m-[0_1px] hover:yoo-editor-bg-[#37362f14] focus:yoo-editor-bg-[#37362f14] active:yoo-editor-bg-[#37362f14];
 }

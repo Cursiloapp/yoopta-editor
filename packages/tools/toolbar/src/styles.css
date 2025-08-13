@@ -5,6 +5,13 @@
   @apply yoo-toolbar-bg-[#FFFFFF] yoo-toolbar-flex yoo-toolbar-z-50 yoo-toolbar-p-[5px] yoo-toolbar-rounded-md yoo-toolbar-shadow-md yoo-toolbar-border-[1px] yoo-toolbar-border-solid yoo-toolbar-border-[#e3e3e3]
 }
 
+/* Dark mode support for toolbar */
+.dark .yoopta-toolbar-root {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 12px #0f0f0f;
+  color: white;
+}
+
 .yoopta-toolbar-group {
   @apply yoo-toolbar-flex yoo-toolbar-items-center
 }
