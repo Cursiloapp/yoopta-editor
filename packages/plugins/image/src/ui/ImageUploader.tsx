@@ -23,14 +23,14 @@ const ImageUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading }:
   const isEmbed = activeTab === 'embed';
 
   const getTabStyles = (isActive) => ({
-    borderBottom: isActive ? '2px solid #2483e2' : '2px solid transparent',
+    borderBottom: isActive ? '2px solid #fe4a55' : '2px solid transparent',
   });
 
   return (
     <Portal id="yoo-image-uploader-portal">
       <Overlay lockScroll className="yoo-image-z-[100]" onClick={onClose}>
         <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
-          <div className="yoo-image-flex yoo-image-flex-col yoo-image-min-w-[540px] yoo-image-max-w-[calc(100vw-24px)] yoo-image-h-full yoo-image-max-h-[420px] yoo-image-bg-[#FFFFFF] yoo-image-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
+          <div className="yoo-image-flex yoo-image-flex-col yoo-image-rounded-[6px] yoo-image-min-w-[540px] yoo-image-max-w-[calc(100vw-24px)] yoo-image-h-full yoo-image-max-h-[420px] yoo-image-bg-[#FFFFFF] yoo-image-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
             <div className="yoo-image-w-full yoo-image-flex yoo-image-text-[14px] yoo-image-p-[0_8px] yoo-image-shadow-[rgb(55_53_47_/9%)_0px_-1px_0px_inset] yoo-image-relative yoo-image-z-10 yoo-image-h-[40px]">
               <button
                 type="button"
