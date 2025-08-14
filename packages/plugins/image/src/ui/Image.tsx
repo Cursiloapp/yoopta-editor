@@ -70,9 +70,8 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         });
       },
       handleComponent: {
-        // TODO: If ever need resizer, we can ucomment this
-        // left: isReadOnly ? <></> : <Resizer position="left" />,
-        // right: isReadOnly ? <></> : <Resizer position="right" />,
+        left: isReadOnly ? <></> : <Resizer position="left" />,
+        right: isReadOnly ? <></> : <Resizer position="right" />,
       },
     }),
     [sizes.width, sizes.height],
