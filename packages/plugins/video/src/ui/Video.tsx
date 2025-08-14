@@ -56,9 +56,11 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         right: { right: 0 },
       },
       onResize: (e, direction, ref) => {
+        if (isReadOnly) return;
         setSizes({ width: ref.offsetWidth, height: ref.offsetHeight });
       },
       onResizeStop: (e, direction, ref) => {
+        if (isReadOnly) return;
         Elements.updateElement(editor, blockId, {
           type: 'video',
           props: {
@@ -67,8 +69,8 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         });
       },
       handleComponent: {
-        left: <Resizer position="left" />,
-        right: <Resizer position="right" />,
+        left: isReadOnly ? <></> : <Resizer position="left" />,
+        right: isReadOnly ? <></> : <Resizer position="right" />,
       },
     }),
     [sizes.width, sizes.height],

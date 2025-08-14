@@ -1,7 +1,7 @@
 const Resizer = ({ position }) => (
   <div
     contentEditable={false}
-    className={`yoo-video-absolute yoo-video-pointer-events-none yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-z-10 yoo-video-opacity-1 yoo-video-h-full yoo-video-w-[15px] yoo-video-cursor-col-resize yoo-video-transition-opacity yoo-video-duration-150 yoo-video-ease-in ${
+    className={`yoo-video-absolute yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-z-10 yoo-video-opacity-1 yoo-video-h-full yoo-video-w-[15px] yoo-video-cursor-col-resize yoo-video-transition-opacity yoo-video-duration-150 yoo-video-ease-in ${
       position === 'left' ? 'yoo-video-left-0 yoo-video-top-0' : 'yoo-video-right-0 yoo-video-top-0'
     }`}
   >
