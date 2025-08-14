@@ -35,7 +35,7 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         width: propSizes?.width || 762,
         height: propSizes?.height || 428,
       }),
-    [element.props],
+    [propSizes?.width, propSizes?.height],
   );
 
   const blockSelected = useBlockSelected({ blockId });
@@ -74,7 +74,7 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         right: isReadOnly ? <></> : <Resizer position="right" />,
       },
     }),
-    [sizes.width, sizes.height],
+    [sizes.width, sizes.height, pluginOptions?.maxSizes?.maxWidth, pluginOptions?.maxSizes?.maxHeight, isReadOnly, editor, blockId],
   );
 
   if (!src) {
@@ -111,6 +111,7 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
             width={sizes?.width}
             bgColor={bgColor}
             height={sizes?.height}
+            layout="responsive"
             attributes={attributes}
           >
             {children}

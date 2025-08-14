@@ -35,7 +35,7 @@ const Image = new YooptaPlugin<ImageElementMap, ImagePluginOptions>({
     },
     onUpload: () => Promise.resolve({ src: null, alt: null }),
     accept: 'image/png, image/jpeg, image/gif, image/webp',
-    maxSizes: { maxWidth: 762, maxHeight: 'auto' },
+    maxSizes: { maxWidth: 762, maxHeight: 428 },
   },
   parsers: {
     html: {
