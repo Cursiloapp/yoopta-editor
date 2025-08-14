@@ -20,7 +20,7 @@ const Video = new YooptaPlugin<VideoElementMap, VideoPluginOptions>({
         src: null,
         srcSet: null,
         bgColor: null,
-        sizes: { width: '100%', height: 'auto' },
+        sizes: { width: 762, height: 428 },
         nodeType: 'void',
         fit: 'cover',
         provider: {

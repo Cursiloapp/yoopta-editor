@@ -16,7 +16,7 @@ const WithStarterKit = () => {
         id="starter-kit"
         value={value}
         onChange={(data) => setValue(data)}
-        style={{ width: 1000 }}
+        style={{ width: 762 }}
         selectionRef={selectionRef}
         placeholder="Start typing here..."
         media={{

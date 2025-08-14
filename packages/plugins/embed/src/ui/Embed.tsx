@@ -24,15 +24,15 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const isReadOnly = useYooptaReadOnly();
 
   const [sizes, setSizes] = useState({
-    width: propSizes?.width || 750,
-    height: propSizes?.height || 440,
+    width: propSizes?.width || 762,
+    height: propSizes?.height || 428,
   });
 
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || 1000,
-        height: propSizes?.height || 'auto',
+        width: propSizes?.width || 762,
+        height: propSizes?.height || 428,
       }),
     [element.props],
   );

@@ -25,15 +25,15 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const pluginOptions = useYooptaPluginOptions<ImagePluginOptions>('Image');
 
   const [sizes, setSizes] = useState({
-    width: propSizes?.width || '100%',
-    height: propSizes?.height || 'auto',
+    width: propSizes?.width || 762,
+    height: propSizes?.height || 428,
   });
 
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || '100%',
-        height: propSizes?.height || 'auto',
+        width: propSizes?.width || 762,
+        height: propSizes?.height || 428,
       }),
     [element.props],
   );

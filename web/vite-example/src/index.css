@@ -40,7 +40,7 @@ button:hover {
 }
 
 .yoopta-editor {
-  width: 750px;
+  width: 762px;
 }
 
 .editor-container {
@@ -48,5 +48,5 @@ button:hover {
   padding: 80px;
   display: flex;
   justify-content: center;
-  max-width: 640px;
+  max-width: 762px;
 }

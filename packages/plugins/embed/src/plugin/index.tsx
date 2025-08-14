@@ -15,7 +15,7 @@ const Embed = new YooptaPlugin<EmbedElementMap, EmbedPluginOptions>({
     embed: {
       render: EmbedRender,
       props: {
-        sizes: { width: 1000, height: 'auto' },
+        sizes: { width: 762, height: 428 },
         nodeType: 'void',
       },
     },

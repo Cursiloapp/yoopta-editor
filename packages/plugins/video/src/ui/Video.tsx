@@ -24,15 +24,15 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const isReadOnly = useYooptaReadOnly();
 
   const [sizes, setSizes] = useState({
-    width: propSizes?.width || 750,
-    height: propSizes?.height || 440,
+    width: propSizes?.width || 762,
+    height: propSizes?.height || 428,
   });
 
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || 1000,
-        height: propSizes?.height || 'auto',
+        width: propSizes?.width || 762,
+        height: propSizes?.height || 428,
       }),
     [element.props],
   );
@@ -43,8 +43,8 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     () => ({
       minWidth: 300,
       size: { width: sizes.width, height: sizes.height },
-      maxWidth: pluginOptions?.maxSizes?.maxWidth || 1000,
-      maxHeight: pluginOptions?.maxSizes?.maxHeight || 'auto',
+      maxWidth: pluginOptions?.maxSizes?.maxWidth || 762,
+      maxHeight: pluginOptions?.maxSizes?.maxHeight || 428,
       lockAspectRatio: true,
       resizeRatio: 2,
       enable: {

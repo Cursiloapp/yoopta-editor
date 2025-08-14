@@ -13,7 +13,7 @@ import { TOOLS } from '../../utils/yoopta/tools';
 import { FixedToolbar } from '../../components/FixedToolbar/FixedToolbar';
 
 const EDITOR_STYLE = {
-  width: 750,
+  width: 762,
 };
 
 const data = {
