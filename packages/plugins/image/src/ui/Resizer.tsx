@@ -1,7 +1,7 @@
 const Resizer = ({ position }) => (
   <div
     contentEditable={false}
-    className={`yoo-image-absolute yoo-image-pointer-events-none yoo-image-flex yoo-image-items-center yoo-image-justify-center yoo-image-z-10 yoo-image-opacity-1 yoo-image-h-full yoo-image-w-[15px] yoo-image-cursor-col-resize yoo-image-transition-opacity yoo-image-duration-150 yoo-image-ease-in ${
+    className={`yoo-image-absolute yoo-image-flex yoo-image-items-center yoo-image-justify-center yoo-image-z-10 yoo-image-opacity-1 yoo-image-h-full yoo-image-w-[15px] yoo-image-cursor-col-resize yoo-image-transition-opacity yoo-image-duration-150 yoo-image-ease-in ${
       position === 'left' ? 'yoo-image-left-0 yoo-image-top-0' : 'yoo-image-right-0 yoo-image-top-0'
     }`}
   >
