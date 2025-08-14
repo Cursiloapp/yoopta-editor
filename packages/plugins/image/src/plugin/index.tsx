@@ -35,7 +35,7 @@ const Image = new YooptaPlugin<ImageElementMap, ImagePluginOptions>({
     },
     onUpload: () => Promise.resolve({ src: null, alt: null }),
     accept: 'image/png, image/jpeg, image/gif, image/webp',
-    maxSizes: { maxWidth: 650, maxHeight: 550 },
+    maxSizes: { maxWidth: 1000, maxHeight: 'auto' },
   },
   parsers: {
     html: {
@@ -44,8 +44,8 @@ const Image = new YooptaPlugin<ImageElementMap, ImagePluginOptions>({
         parse: (el, editor) => {
           if (el.nodeName === 'IMG') {
             const sizes = {
-              width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '650', 10) : 650,
-              height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || '500', 10) : 500,
+              width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '1000', 10) : 1000,
+              height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || 'auto', 10) : 'auto',
             };
 
             const maxSizes = (editor.plugins.Image.options as ImagePluginOptions)?.maxSizes;

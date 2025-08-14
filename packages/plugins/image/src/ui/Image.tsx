@@ -25,15 +25,15 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const pluginOptions = useYooptaPluginOptions<ImagePluginOptions>('Image');
 
   const [sizes, setSizes] = useState({
-    width: propSizes?.width || 650,
-    height: propSizes?.height || 440,
+    width: propSizes?.width || '100%',
+    height: propSizes?.height || 'auto',
   });
 
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || 650,
-        height: propSizes?.height || 440,
+        width: propSizes?.width || '100%',
+        height: propSizes?.height || 'auto',
       }),
     [element.props],
   );
@@ -44,8 +44,8 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     () => ({
       minWidth: 300,
       size: { width: sizes.width, height: sizes.height },
-      maxWidth: pluginOptions?.maxSizes?.maxWidth || 800,
-      maxHeight: pluginOptions?.maxSizes?.maxHeight || 720,
+      maxWidth: pluginOptions?.maxSizes?.maxWidth || 1000,
+      maxHeight: pluginOptions?.maxSizes?.maxHeight || 'auto',
       lockAspectRatio: true,
       resizeRatio: 2,
       enable: {

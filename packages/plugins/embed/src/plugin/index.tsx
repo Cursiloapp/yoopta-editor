@@ -15,7 +15,7 @@ const Embed = new YooptaPlugin<EmbedElementMap, EmbedPluginOptions>({
     embed: {
       render: EmbedRender,
       props: {
-        sizes: { width: 650, height: 500 },
+        sizes: { width: 1000, height: 'auto' },
         nodeType: 'void',
       },
     },
@@ -47,8 +47,8 @@ const Embed = new YooptaPlugin<EmbedElementMap, EmbedPluginOptions>({
                   url: url.href,
                 },
                 sizes: {
-                  width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '650', 10) : 650,
-                  height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || '400', 10) : 400,
+                  width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '1000', 10) : 1000,
+                  height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || 'auto', 10) : 'auto',
                 },
               },
             };

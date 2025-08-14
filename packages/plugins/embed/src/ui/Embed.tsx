@@ -31,8 +31,8 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || 650,
-        height: propSizes?.height || 440,
+        width: propSizes?.width || 1000,
+        height: propSizes?.height || 'auto',
       }),
     [element.props],
   );
@@ -99,8 +99,8 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
           extendRender(props)
         ) : (
           <EmbedComponent
-            width={sizes?.width || 650}
-            height={sizes?.height || 550}
+            width={sizes?.width || 1000}
+            height={sizes?.height || 'auto'}
             provider={provider}
             blockId={blockId}
             attributes={attributes}

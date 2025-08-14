@@ -31,8 +31,8 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   useEffect(
     () =>
       setSizes({
-        width: propSizes?.width || 650,
-        height: propSizes?.height || 440,
+        width: propSizes?.width || 1000,
+        height: propSizes?.height || 'auto',
       }),
     [element.props],
   );
@@ -43,8 +43,8 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     () => ({
       minWidth: 300,
       size: { width: sizes.width, height: sizes.height },
-      maxWidth: pluginOptions?.maxSizes?.maxWidth || 800,
-      maxHeight: pluginOptions?.maxSizes?.maxHeight || 720,
+      maxWidth: pluginOptions?.maxSizes?.maxWidth || 1000,
+      maxHeight: pluginOptions?.maxSizes?.maxHeight || 'auto',
       lockAspectRatio: true,
       resizeRatio: 2,
       enable: {
@@ -67,9 +67,8 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         });
       },
       handleComponent: {
-        // TODO: If ever need resizer, we can uncomment this
-        // left: <Resizer position="left" />,
-        // right: <Resizer position="right" />,
+        left: <Resizer position="left" />,
+        right: <Resizer position="right" />,
       },
     }),
     [sizes.width, sizes.height],

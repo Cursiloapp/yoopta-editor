@@ -38,7 +38,7 @@ const Video = new YooptaPlugin<VideoElementMap, VideoPluginOptions>({
   },
   options: {
     accept: 'video/*',
-    maxSizes: { maxWidth: 650, maxHeight: 550 },
+    maxSizes: { maxWidth: 1000, maxHeight: 'auto' },
     onUpload: async () => Promise.resolve({ src: '' }),
     display: {
       title: 'Video',
@@ -57,8 +57,8 @@ const Video = new YooptaPlugin<VideoElementMap, VideoPluginOptions>({
             const bgColor = el.getAttribute('bgcolor');
 
             const sizes = {
-              width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '650', 10) : 650,
-              height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || '500', 10) : 500,
+              width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '1000', 10) : 1000,
+              height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || 'auto', 10) : 'auto',
             };
 
             const maxSizes = (editor.plugins.Image.options as VideoPluginOptions)?.maxSizes;
