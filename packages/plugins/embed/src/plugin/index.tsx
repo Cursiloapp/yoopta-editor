@@ -47,8 +47,8 @@ const Embed = new YooptaPlugin<EmbedElementMap, EmbedPluginOptions>({
                   url: url.href,
                 },
                 sizes: {
-                  width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '1000', 10) : 1000,
-                  height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || 'auto', 10) : 'auto',
+                  width: el.getAttribute('width') ? parseInt(el.getAttribute('width') || '762', 10) : 762,
+                  height: el.getAttribute('height') ? parseInt(el.getAttribute('height') || '428', 10) : 428,
                 },
               },
             };

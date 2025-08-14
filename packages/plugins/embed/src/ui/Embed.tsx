@@ -99,8 +99,8 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
           extendRender(props)
         ) : (
           <EmbedComponent
-            width={sizes?.width || 1000}
-            height={sizes?.height || 'auto'}
+            width={sizes?.width || 762}
+            height={sizes?.height || 428}
             provider={provider}
             blockId={blockId}
             attributes={attributes}

@@ -44,8 +44,8 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     () => ({
       minWidth: 300,
       size: { width: sizes.width, height: sizes.height },
-      maxWidth: pluginOptions?.maxSizes?.maxWidth || 1000,
-      maxHeight: pluginOptions?.maxSizes?.maxHeight || 'auto',
+      maxWidth: pluginOptions?.maxSizes?.maxWidth || 762,
+      maxHeight: pluginOptions?.maxSizes?.maxHeight || 428,
       lockAspectRatio: true,
       resizeRatio: 2,
       enable: {
