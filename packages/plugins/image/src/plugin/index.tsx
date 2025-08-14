@@ -22,7 +22,7 @@ const Image = new YooptaPlugin<ImageElementMap, ImagePluginOptions>({
         srcSet: null,
         bgColor: null,
         fit: 'contain',
-        sizes: { width: 1200, height: 675 },
+        sizes: { width: 762, height: 428 },
         nodeType: 'void',
       },
     },
