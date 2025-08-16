@@ -48,7 +48,7 @@ export function Loom({ provider, attributes, children, width, height }: Provider
               width: '100%',
               height: '100%',
               border: 'none',
-              borderRadius: '4px',
+              borderRadius: '3px',
             }}
           />
         )}

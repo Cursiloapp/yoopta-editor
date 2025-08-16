@@ -74,7 +74,15 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
         right: isReadOnly ? <></> : <Resizer position="right" />,
       },
     }),
-    [sizes.width, sizes.height, pluginOptions?.maxSizes?.maxWidth, pluginOptions?.maxSizes?.maxHeight, isReadOnly, editor, blockId],
+    [
+      sizes.width,
+      sizes.height,
+      pluginOptions?.maxSizes?.maxWidth,
+      pluginOptions?.maxSizes?.maxHeight,
+      isReadOnly,
+      editor,
+      blockId,
+    ],
   );
 
   if (!src) {
@@ -98,7 +106,7 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     >
       <Resizable {...resizeProps} className="yoo-image-my-0 yoo-image-flex">
         {blockSelected && (
-          <div className="yoo-image-absolute yoo-image-pointer-events-none yoo-image-inset-0 yoo-image-bg-[rgba(35,131,226,0.14)] yoo-image-z-[81] yoo-image-rounded-[3px] yoo-image-opacity-100 yoo-image-transition-opacity yoo-image-duration-150 yoo-image-ease-in" />
+          <div className="yoo-image-absolute yoo-image-pointer-events-none yoo-image-inset-0 yoo-image-z-[81] yoo-image-rounded-[3px] yoo-image-opacity-100 yoo-image-transition-opacity yoo-image-duration-150 yoo-image-ease-in" />
         )}
         {extendRender ? (
           extendRender(props)

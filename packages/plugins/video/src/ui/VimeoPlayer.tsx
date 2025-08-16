@@ -46,7 +46,7 @@ function VimeoPlayer({ videoId, children, attributes, ...other }) {
           frameBorder={0}
           allowFullScreen
           onLoad={() => setFrameLoaded(true)}
-          className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0"
+          className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0 yoo-video-rounded-[3px]"
           {...other}
         />
       )}

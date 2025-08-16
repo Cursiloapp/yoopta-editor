@@ -47,7 +47,7 @@ const EmbedComponent = ({ width, height, provider, blockId, attributes, children
         height="100%"
         frameBorder={0}
         allowFullScreen
-        className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+        className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
       />
       {children}
     </div>

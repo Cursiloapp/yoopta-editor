@@ -47,7 +47,7 @@ function LoomPlayer({ videoId, children, attributes, width, height, ...other }) 
               width: '100%',
               height: '100%',
               border: 'none',
-              borderRadius: '4px',
+              borderRadius: '3px',
             }}
             {...other}
           />

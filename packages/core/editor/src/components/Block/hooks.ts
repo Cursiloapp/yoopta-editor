@@ -64,6 +64,7 @@ export const useBlockStyles = (
       transition,
       opacity: isDragging ? 0.7 : 1,
       borderBottom: isOver && !isDragging ? '2px solid #fe4a55' : undefined,
+      borderRadius: isOver && !isDragging ? '0px' : undefined,
     }),
     [block.meta.depth, transform, transition, isDragging, isOver],
   );

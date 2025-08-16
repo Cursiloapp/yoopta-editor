@@ -13,7 +13,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { Placeholder } from './Placeholder';
 import { VideoPluginOptions } from '../types';
 import { VideoBlockOptions } from './VideoBlockOptions';
-import { Resizer } from './Resizer';
 
 const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const { element, blockId, attributes, children } = props;
@@ -68,10 +67,7 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
           },
         });
       },
-      handleComponent: {
-        left: isReadOnly ? <></> : <Resizer position="left" />,
-        right: isReadOnly ? <></> : <Resizer position="right" />,
-      },
+      handleComponent: {},
     }),
     [sizes.width, sizes.height],
   );
@@ -84,7 +80,7 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     );
   }
 
-  const currentAlign = block?.meta?.align || 'center';
+  const currentAlign = 'center';
   const alignClass = `yoopta-align-${currentAlign}`;
 
   return (
@@ -95,7 +91,7 @@ const VideoRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     >
       <Resizable {...resizeProps} className="yoo-video-my-0 yoo-video-flex">
         {blockSelected && (
-          <div className="yoo-video-absolute yoo-video-pointer-events-none yoo-video-inset-0 yoo-video-bg-[rgba(35,131,226,0.14)] yoo-video-z-[81] yoo-video-rounded-[3px] yoo-video-opacity-100 yoo-video-transition-opacity yoo-video-duration-150 yoo-video-ease-in" />
+          <div className="yoo-video-absolute yoo-video-pointer-events-none yoo-video-inset-0 yoo-video-z-[81] yoo-video-rounded-[3px] yoo-video-opacity-100 yoo-video-transition-opacity yoo-video-duration-150 yoo-video-ease-in" />
         )}
         {extendRender ? (
           extendRender(props)

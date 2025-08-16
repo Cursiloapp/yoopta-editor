@@ -39,7 +39,7 @@ function Wistia({ provider, attributes, children, width, height }: ProviderRende
               width: '100%',
               height: '100%',
               border: 'none',
-              borderRadius: '4px',
+              borderRadius: '3px',
             }}
           />
         )}

@@ -37,7 +37,7 @@ function YouTube({ provider, width, height, attributes, children }: ProviderRend
           frameBorder={0}
           onLoad={() => setFrameLoaded(true)}
           allowFullScreen
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
           width={width}
           height={height}
         />

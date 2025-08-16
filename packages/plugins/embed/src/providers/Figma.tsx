@@ -22,7 +22,7 @@ const Figma = ({ provider, width, height, attributes, children }: ProviderRender
           src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(provider?.url || '')}`}
           frameBorder={0}
           allowFullScreen
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
           width={width}
           height={height}
         />

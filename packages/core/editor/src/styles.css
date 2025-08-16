@@ -55,7 +55,7 @@
 }
 
 .yoopta-selection-block[data-block-selected='true']::before {
-  @apply yoo-editor-bg-[#fe4a55] yoo-editor-opacity-100;
+  @apply yoo-editor-bg-[#fe4a55] yoo-editor-opacity-100 yoo-editor-z-10;
 }
 
 .yoopta-block-actions {

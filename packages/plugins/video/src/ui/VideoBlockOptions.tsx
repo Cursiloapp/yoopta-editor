@@ -1,26 +1,10 @@
-import { Blocks, Elements, UI, useYooptaPluginOptions, YooEditor, YooptaBlockData } from '@yoopta/editor';
-import {
-  RowSpacingIcon,
-  SizeIcon,
-  WidthIcon,
-  ExternalLinkIcon,
-  TextAlignCenterIcon,
-  TextAlignLeftIcon,
-  TextAlignRightIcon,
-  ImageIcon,
-  UpdateIcon,
-} from '@radix-ui/react-icons';
+import { Elements, UI, useYooptaPluginOptions, YooEditor, YooptaBlockData } from '@yoopta/editor';
+import { RowSpacingIcon, SizeIcon, WidthIcon, ExternalLinkIcon, ImageIcon, UpdateIcon } from '@radix-ui/react-icons';
 import { VideoElementProps, VideoPluginElements, VideoPluginOptions } from '../types';
 import CheckmarkIcon from '../icons/checkmark.svg';
 import DownloadIcon from '../icons/download.svg';
 import { useState } from 'react';
 import { Loader } from './Loader';
-
-const ALIGN_ICONS = {
-  left: TextAlignLeftIcon,
-  center: TextAlignCenterIcon,
-  right: TextAlignRightIcon,
-};
 
 const { ExtendedBlockActions, BlockOptionsMenuGroup, BlockOptionsMenuItem, BlockOptionsSeparator } = UI;
 
@@ -79,17 +63,6 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
     if (videoProps?.provider?.url) {
       window.open(videoProps?.provider?.url, '_blank');
     }
-  };
-
-  const currentAlign = block?.meta?.align || 'center';
-  const AlignIcon = ALIGN_ICONS[currentAlign];
-
-  const onToggleAlign = () => {
-    const aligns = ['left', 'center', 'right'];
-    if (!block) return;
-
-    const nextAlign = aligns[(aligns.indexOf(currentAlign) + 1) % aligns.length] as YooptaBlockData['meta']['align'];
-    Blocks.updateBlock(editor, block.id, { meta: { ...block.meta, align: nextAlign } });
   };
 
   const onUploadPoster = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -238,16 +211,7 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
             </label>
           </BlockOptionsMenuItem>
         )}
-        <BlockOptionsMenuItem>
-          <button
-            type="button"
-            className="yoopta-button yoo-video-rounded-sm hover:yoo-video-bg-[#37352f14] yoo-video-leading-[120%] yoo-video-px-2 yoo-video-py-1.5 yoo-video-mx-[4px] yoo-video-cursor-pointer yoo-video-w-full yoo-video-flex yoo-video-justify-start"
-            onClick={onToggleAlign}
-          >
-            <AlignIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
-            Alignment
-          </button>
-        </BlockOptionsMenuItem>
+
         <BlockOptionsMenuItem>
           <button
             type="button"

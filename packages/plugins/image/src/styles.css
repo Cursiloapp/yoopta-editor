@@ -36,18 +36,3 @@
 .yoopta-image-zoom-overlay {
   @apply yoo-image-z-50 yoo-image-w-full yoo-image-h-full;
 }
-
-/* Uploader portal styles for images */
-[id*='uploader-portal'] div.yoo-image-flex.yoo-image-flex-col {
-  border-radius: 5px !important;
-}
-
-/* Custom primary color for image upload button */
-.yoopta-editor .disabled\:yoo-image-bg-\[rgba\(35\2c 131\2c 226\2c 0\.5\)\]:disabled {
-  background-color: var(hsl(--primary)) !important;
-  opacity: 0.5 !important;
-}
-
-.yoopta-editor .yoo-image-bg-\[rgb\(35\,131\,226\)\] {
-  background-color: var(hsl(--primary)) !important;
-}

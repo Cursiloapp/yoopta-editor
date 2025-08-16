@@ -39,7 +39,7 @@ const SelectionBox = ({ origin, coords, isOpen }: SelectionBoxProps) => {
     transformOrigin: 'top left',
     transform: getTransform(),
     position: 'fixed',
-    backgroundColor: 'rgba(35, 131, 226, 0.14)',
+    backgroundColor: 'rgba(254, 74, 85, 0.14)',
   };
 
   return <div style={selectionBoxStyle} />;

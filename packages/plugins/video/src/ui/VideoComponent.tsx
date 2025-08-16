@@ -77,7 +77,7 @@ const VideoComponent = ({
           width={width}
           height={height}
           onDragStart={(e) => e.preventDefault()}
-          className="yoo-video-object-cover yoo-video-w-full yoo-video-h-full"
+          className="yoo-video-object-cover yoo-video-w-full yoo-video-h-full yoo-video-rounded-[3px]"
           style={style}
           playsInline
           controls

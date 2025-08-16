@@ -46,7 +46,7 @@ function DailyMotion({ provider, width, height, attributes, children }: Provider
           onLoad={() => setFrameLoaded(true)}
           src={`https://www.dailymotion.com/embed/embed/${provider.id}`}
           allowFullScreen
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
           width={width}
           height={height}
         />

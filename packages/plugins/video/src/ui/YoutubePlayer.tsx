@@ -36,7 +36,7 @@ function YouTubePlayer({ videoId, children, attributes, ...other }) {
           frameBorder={0}
           onLoad={() => setFrameLoaded(true)}
           allowFullScreen
-          className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0"
+          className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0 yoo-video-rounded-[3px]"
           {...other}
         />
       )}

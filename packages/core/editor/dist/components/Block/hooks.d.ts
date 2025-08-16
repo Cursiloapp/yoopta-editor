@@ -871,6 +871,7 @@ export declare const useBlockStyles: (block: YooptaBlockData, transform: Transfo
     transition: string | undefined;
     opacity: number;
     borderBottom: string | undefined;
+    borderRadius: string | undefined;
 };
 export declare const useBlockOptionsRefs: () => {
     blockOptionsRefs: {

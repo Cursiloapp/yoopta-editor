@@ -34,7 +34,7 @@ const Instagram: React.FC<InstagramProps> = ({ provider, width, height, attribut
             scrolling="no"
             allowTransparency
             allowFullScreen
-            className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+            className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
           />
         )}
         {children}

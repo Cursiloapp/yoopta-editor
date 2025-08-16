@@ -47,7 +47,7 @@ function Vimeo({ provider, width, height, attributes, children }: ProviderRender
           frameBorder={0}
           allowFullScreen
           onLoad={() => setFrameLoaded(true)}
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0"
+          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
           width={width}
           height={height}
         />

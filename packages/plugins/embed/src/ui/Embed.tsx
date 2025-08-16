@@ -13,7 +13,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { Placeholder } from './Placeholder';
 import { EmbedPluginOptions } from '../types';
 import { EmbedBlockOptions } from './EmbedBlockOptions';
-import { Resizer } from './Resizer';
 
 const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const { element, children, attributes, blockId } = props;
@@ -68,10 +67,7 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
           },
         });
       },
-      handleComponent: {
-        left: isReadOnly ? <></> : <Resizer position="left" />,
-        right: isReadOnly ? <></> : <Resizer position="right" />,
-      },
+      handleComponent: {},
     }),
     [sizes.width, sizes.height],
   );
@@ -84,7 +80,7 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     );
   }
 
-  const currentAlign = block?.meta?.align || 'center';
+  const currentAlign = 'center';
   const alignClass = `yoopta-align-${currentAlign}`;
 
   return (
@@ -95,7 +91,7 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     >
       <Resizable {...resizeProps} className="yoo-embed-my-0 yoo-embed-flex">
         {blockSelected && (
-          <div className="yoo-embed-absolute yoo-embed-pointer-events-none yoo-embed-inset-0 yoo-embed-bg-[rgba(35,131,226,0.14)] yoo-embed-z-[81] yoo-embed-rounded-[3px] yoo-embed-opacity-100 yoo-embed-transition-opacity yoo-embed-duration-150 yoo-embed-ease-in" />
+          <div className="yoo-embed-absolute yoo-embed-pointer-events-none yoo-embed-inset-0 yoo-embed-z-[81] yoo-embed-rounded-[3px] yoo-embed-opacity-100 yoo-embed-transition-opacity yoo-embed-duration-150 yoo-embed-ease-in" />
         )}
         {extendRender ? (
           extendRender(props)

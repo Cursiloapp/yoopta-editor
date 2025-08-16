@@ -20,7 +20,6 @@ const FileUploader = ({ accept = '', onClose, blockId, onSetLoading }: Props) =>
     onSetLoading(true);
 
     try {
-      // [TODO] - abort controller?
       const response = await options?.onUpload(file);
 
       Elements.updateElement<FilePluginElements, FileElementProps>(editor, blockId, {
@@ -44,16 +43,17 @@ const FileUploader = ({ accept = '', onClose, blockId, onSetLoading }: Props) =>
     if (file) upload(file);
   };
 
+  // Shared button style with yoo-file prefix
+  const baseButtonClass =
+    'yoo-file-w-full yoo-file-user-select-none yoo-file-transition-bg yoo-file-duration-20 yoo-file-ease-in yoo-file-cursor-pointer yoo-file-flex yoo-file-items-center yoo-file-justify-center yoo-file-white-space-nowrap yoo-file-h-[32px] yoo-file-rounded-[4px] yoo-file-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-file-bg-[rgba(254,74,85,1)] yoo-file-text-white yoo-file-leading-[1.2] yoo-file-px-[12px] yoo-file-text-[14px] yoo-file-font-medium';
+
   return (
-    <div className="yoo-file-user-select-none yoo-file-transition-bg yoo-file-duration-20 yoo-file-ease-in yoo-file-white-space-nowrap yoo-file-rounded-[4px] yoo-file-h-[32px] yoo-file-px-[12px] yoo-file-border yoo-file-border-solid yoo-file-border-[rgba(55,53,47,0.16)] yoo-file-w-full yoo-file-cursor-pointer">
-      <label
-        htmlFor="file-uploader"
-        className="yoo-file-text-[14px] yoo-file-leading-[1.2] yoo-file-font-medium yoo-file-cursor-pointer yoo-file-w-full yoo-file-flex yoo-file-items-center yoo-file-justify-center yoo-file-h-full"
-      >
+    <div className="yoo-file-w-full">
+      <label htmlFor="file-uploader" className={baseButtonClass}>
         <input
           type="file"
           id="file-uploader"
-          className="yoo-file-absolute yoo-file-left-0 yoo-file-top-0 yoo-file-invisible"
+          className="yoo-file-hidden"
           accept={options?.accept || accept}
           onChange={onChange}
           multiple={false}

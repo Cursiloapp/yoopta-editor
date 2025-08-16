@@ -21,7 +21,6 @@ const FileUploader = ({ accept = 'video/*', onClose, blockId, onSetLoading }: Pr
     onSetLoading(true);
 
     try {
-      // [TODO] - abort controller?
       const data = await options?.onUpload(file);
       const defaultVideoProps = editor.plugins.Video.elements.video.props as VideoElementProps;
       const sizes = data.sizes || defaultVideoProps.sizes;
@@ -54,22 +53,27 @@ const FileUploader = ({ accept = 'video/*', onClose, blockId, onSetLoading }: Pr
     if (file) upload(file);
   };
 
+  const baseButtonClass =
+    'yoo-video-w-full yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-cursor-pointer yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-white-space-nowrap yoo-video-h-[32px] yoo-video-rounded-[4px] yoo-video-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-video-bg-[rgba(254,74,85,1)] yoo-video-text-white yoo-video-leading-[1.2] yoo-video-px-[12px] yoo-video-text-[14px] yoo-video-font-medium';
+
   return (
-    <div className="yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-white-space-nowrap yoo-video-rounded-[4px] yoo-video-h-[32px] yoo-video-px-[12px] yoo-video-border yoo-video-border-solid yoo-video-border-[rgba(55,53,47,0.16)] yoo-video-w-full yoo-video-cursor-pointer">
-      <label
-        htmlFor="video-uploader"
-        className="yoo-video-text-[14px] yoo-video-leading-[1.2] yoo-video-font-medium yoo-video-cursor-pointer yoo-video-w-full yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-h-full"
-      >
-        <input
-          type="file"
-          id="video-uploader"
-          className="yoo-video-absolute yoo-video-left-0 yoo-video-top-0 yoo-video-invisible"
-          accept={options?.accept || accept}
-          onChange={onChange}
-          multiple={false}
-        />
-        Upload video
-      </label>
+    <div className="yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-white-space-nowrap yoo-video-w-full">
+      <div className="yoo-video-flex yoo-video-justify-between yoo-video-w-full yoo-video-items-center yoo-video-mt-2 yoo-video-mb-1">
+        {/* Upload Video Button */}
+        <div className="yoo-video-flex yoo-video-items-center yoo-video-w-full yoo-video-justify-start">
+          <label htmlFor="video-uploader" className={baseButtonClass}>
+            <input
+              type="file"
+              id="video-uploader"
+              className="yoo-video-absolute yoo-video-left-0 yoo-video-top-0 yoo-video-invisible yoo-video-h-[28px] yoo-video-rounded-[4px] yoo-video-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-video-bg-[rgba(254,74,85,1)] yoo-video-text-white yoo-video-fill-white yoo-video-leading-[1.2] yoo-video-px-[12px] yoo-video-text-[14px] yoo-video-font-medium yoo-video-w-full"
+              accept={options?.accept || accept}
+              onChange={onChange}
+              multiple={false}
+            />
+            Upload video
+          </label>
+        </div>
+      </div>
     </div>
   );
 };

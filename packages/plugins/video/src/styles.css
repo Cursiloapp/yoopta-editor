@@ -8,8 +8,3 @@
 .yoopta-video:hover .yoopta-video-options {
   opacity: 1;
 }
-
-/* Uploader portal styles for videos */
-[id*='uploader-portal'] div.yoo-video-flex.yoo-video-flex-col {
-  border-radius: 5px !important;
-}
