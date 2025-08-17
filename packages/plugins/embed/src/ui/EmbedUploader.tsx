@@ -1,17 +1,20 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, RefObject } from 'react';
 import { UI } from '@yoopta/editor';
 import { EmbedLinkUploader } from './EmbedLinkUploader';
+import { FloatingArrow, type FloatingContext } from '@floating-ui/react';
 
 type Props = {
   floatingStyles: CSSProperties;
   refs: any;
   blockId: string;
   onClose: () => void;
+  context: FloatingContext;
+  arrowRef: RefObject<SVGSVGElement>;
 };
 
 const { Overlay, Portal } = UI;
 
-const EmbedUploader = ({ floatingStyles, refs, onClose, blockId }: Props) => {
+const EmbedUploader = ({ floatingStyles, refs, onClose, blockId, context, arrowRef }: Props) => {
   return (
     <Portal id="yoo-embed-uploader-portal">
       <Overlay lockScroll className="yoo-embed-z-[100]" onClick={onClose}>
@@ -21,6 +24,16 @@ const EmbedUploader = ({ floatingStyles, refs, onClose, blockId }: Props) => {
               <EmbedLinkUploader onClose={onClose} blockId={blockId} />
             </div>
           </div>
+          <FloatingArrow
+            ref={arrowRef}
+            context={context}
+            width={12}
+            height={6}
+            tipRadius={1}
+            fill="#FFFFFF"
+            stroke="rgb(229 231 235)"
+            strokeWidth={1}
+          />
         </div>
       </Overlay>
     </Portal>

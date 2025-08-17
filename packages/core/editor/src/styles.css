@@ -64,7 +64,7 @@
 }
 
 .yoopta-block-actions-plus {
-  @apply yoopta-button yoo-editor-cursor-pointer yoo-editor-rounded-[6px] yoo-editor-h-[24px] yoo-editor-flex yoo-editor-items-center yoo-editor-justify-center yoo-editor-bg-inherit yoo-editor-bg-transparent yoo-editor-transition-colors yoo-editor-duration-[180ms] yoo-editor-relative yoo-editor-w-[18px] yoo-editor-p-0 yoo-editor-text-[#37352f59] yoo-editor-m-[0_1px] hover:yoo-editor-bg-[#37362f14] focus:yoo-editor-bg-[#37362f14] active:yoo-editor-bg-[#37362f14] yoo-editor-w-[24px];
+  @apply yoopta-button yoo-editor-cursor-pointer yoo-editor-rounded-[6px] yoo-editor-h-[24px] yoo-editor-flex yoo-editor-items-center yoo-editor-justify-center yoo-editor-bg-inherit yoo-editor-bg-transparent yoo-editor-transition-colors yoo-editor-duration-[180ms] yoo-editor-relative yoo-editor-w-[18px] yoo-editor-p-0 yoo-editor-text-[#37352f59] yoo-editor-m-[0_1px] hover:yoo-editor-bg-[#37362f14] focus:yoo-editor-bg-[#37362f14] active:yoo-editor-bg-[#37362f14] yoo-editor-w-[24px] yoo-editor-invisible;
 }
 
 /* Dark mode support for block actions */
@@ -99,7 +99,7 @@
 }
 
 .yoopta-block-options-menu-content {
-  @apply yoo-editor-bg-[#FFF] yoo-editor-relative yoo-editor-min-w-[200px] yoo-editor-w-auto yoo-editor-overflow-hidden yoo-editor-rounded-md yoo-editor-border yoo-editor-border-solid yoo-editor-border-[#e5e7eb] yoo-editor-py-[6px] yoo-editor-px-0 yoo-editor-shadow-md;
+  @apply yoo-editor-bg-[#FFF] yoo-editor-relative yoo-editor-min-w-[200px] yoo-editor-w-auto yoo-editor-overflow-hidden yoo-editor-rounded-md yoo-editor-border yoo-editor-border-solid yoo-editor-border-[#e5e7eb] yoo-editor-py-[6px] yoo-editor-px-0 yoo-editor-shadow-md yoo-editor-ml-[3px];
 }
 
 .yoopta-block-options-group {

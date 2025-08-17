@@ -41,7 +41,7 @@ const EmbedUploader = ({ blockId, onClose }) => {
         className="yoo-video-items-center yoo-video-bg-[hsla(45,13%,94%,.6)] yoo-video-rounded-[4px] yoo-video-shadow-[inset_0_0_0_1px_hsla(0,0%,6%,.1)] yoo-video-cursor-text yoo-video-flex yoo-video-text-[14px] yoo-video-h-[32px] yoo-video-leading-[20px] yoo-video-px-[6px] yoo-video-mt-2 yoo-video-relative yoo-video-w-full yoo-video-border-none"
         onChange={onChange}
       />
-      <div className="yoo-video-flex yoo-video-w-full yoo-video-justify-between yoo-video-items-center yoo-video-mt-4 yoo-video-mb-1">
+      <div className="yoo-video-flex yoo-video-w-full yoo-video-justify-between yoo-video-items-center yoo-video-mt-2 yoo-video-mb-1">
         {/* Embed Video Button */}
         <button
           type="button"

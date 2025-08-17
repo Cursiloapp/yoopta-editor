@@ -1,16 +1,18 @@
-import { useFloating, inline, flip, shift, offset } from '@floating-ui/react';
+import { useFloating, inline, flip, shift, offset, arrow } from '@floating-ui/react';
+import { useRef } from 'react';
 import { CodeIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 import { EmbedUploader } from './EmbedUploader';
 
 const Placeholder = ({ attributes, children, blockId }) => {
   const [isUploaderOpen, setIsUploaderOpen] = useState(false);
+  const arrowRef = useRef<SVGSVGElement | null>(null);
 
-  const { refs, floatingStyles } = useFloating({
+  const { refs, floatingStyles, context } = useFloating({
     placement: 'bottom',
     open: isUploaderOpen,
     onOpenChange: setIsUploaderOpen,
-    middleware: [inline(), flip(), shift(), offset(10)],
+    middleware: [inline(), flip(), shift(), offset(10), arrow({ element: arrowRef })],
   });
 
   return (
@@ -33,6 +35,8 @@ const Placeholder = ({ attributes, children, blockId }) => {
           blockId={blockId}
           floatingStyles={floatingStyles}
           refs={refs}
+          context={context}
+          arrowRef={arrowRef}
           onClose={() => setIsUploaderOpen(false)}
         />
       )}

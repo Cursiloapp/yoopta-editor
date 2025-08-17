@@ -1,7 +1,8 @@
 import { UI } from '@yoopta/editor';
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useState, RefObject } from 'react';
 import { EmbedUploader } from './EmbedUploader';
 import { FileUploader } from './FileUploader';
+import { FloatingArrow, type FloatingContext } from '@floating-ui/react';
 
 const { Overlay, Portal } = UI;
 
@@ -11,11 +12,13 @@ type Props = {
   blockId: string;
   onClose: () => void;
   onSetLoading: (_s: boolean) => void;
+  context: FloatingContext;
+  arrowRef: RefObject<SVGSVGElement>;
 };
 
 type Tab = 'upload' | 'embed';
 
-const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading }: Props) => {
+const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading, context, arrowRef }: Props) => {
   const [activeTab, setActiveTab] = useState<Tab>('upload');
 
   const switchTab = (tab: Tab) => setActiveTab(tab);
@@ -30,12 +33,7 @@ const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading }:
   return (
     <Portal id="yoo-video-uploader-portal">
       <Overlay lockScroll className="yoo-video-z-[100]" onClick={onClose}>
-        <div
-          ref={refs.setFloating}
-          style={floatingStyles}
-          onClick={(e) => e.stopPropagation()}
-          className="yoo-video-p-[12px]"
-        >
+        <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
           <div className="yoo-video-flex yoo-video-flex-col yoo-video-rounded-[6px] yoo-video-min-w-[540px] yoo-video-max-w-[calc(100vw-24px)] yoo-video-h-full yoo-video-max-h-[420px] yoo-video-bg-[#FFFFFF] yoo-video-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
             <div className="yoo-video-w-full yoo-video-flex yoo-video-text-[14px] yoo-video-p-[0_8px] yoo-video-shadow-[rgb(55_53_47_/9%)_0px_-1px_0px_inset] yoo-video-relative yoo-video-z-10 yoo-video-h-[40px]">
               {/* Upload Button */}
@@ -67,11 +65,21 @@ const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading }:
               </button>
             </div>
 
-            <div className="yoo-video-pt-[6px] yoo-video-pb-[6px] yoo-video-mt-[4px] yoo-video-flex yoo-video-justify-center yoo-video-mr-[12px] yoo-video-ml-[12px]">
+            <div className="yoo-video-p-[6px] yoo-video-mt-[4px] yoo-video-flex yoo-video-justify-center">
               {isEmbed && <EmbedUploader onClose={onClose} blockId={blockId} />}
               {isUploader && <FileUploader onClose={onClose} blockId={blockId} onSetLoading={onSetLoading} />}
             </div>
           </div>
+          <FloatingArrow
+            ref={arrowRef}
+            context={context}
+            width={12}
+            height={6}
+            tipRadius={1}
+            fill="#FFFFFF"
+            stroke="rgb(229 231 235)"
+            strokeWidth={1}
+          />
         </div>
       </Overlay>
     </Portal>

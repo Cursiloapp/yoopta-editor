@@ -1,4 +1,5 @@
-import { useFloating, inline, flip, shift, offset } from '@floating-ui/react';
+import { useFloating, inline, flip, shift, offset, arrow } from '@floating-ui/react';
+import { useRef } from 'react';
 import { ImageIcon } from '@radix-ui/react-icons';
 import { CSSProperties, useState } from 'react';
 import { ImageUploader } from './ImageUploader';
@@ -7,12 +8,13 @@ import { Loader } from './Loader';
 const Placeholder = ({ attributes, children, blockId }) => {
   const [isUploaderOpen, setIsUploaderOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const arrowRef = useRef<SVGSVGElement | null>(null);
 
-  const { refs, floatingStyles } = useFloating({
+  const { refs, floatingStyles, context } = useFloating({
     placement: 'bottom',
     open: isUploaderOpen,
     onOpenChange: setIsUploaderOpen,
-    middleware: [inline(), flip(), shift(), offset(10)],
+    middleware: [inline(), flip(), shift(), offset(10), arrow({ element: arrowRef })],
   });
 
   const loadingStyles: CSSProperties = {
@@ -52,6 +54,8 @@ const Placeholder = ({ attributes, children, blockId }) => {
         <ImageUploader
           blockId={blockId}
           floatingStyles={floatingStyles}
+          context={context}
+          arrowRef={arrowRef}
           refs={refs}
           onClose={() => setIsUploaderOpen(false)}
           onSetLoading={onSetLoading}

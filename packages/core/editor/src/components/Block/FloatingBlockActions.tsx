@@ -95,7 +95,7 @@ export const FloatingBlockActions = memo(({ editor, dragHandleProps }: FloatingB
     const isInsideEditor = editor.refElement?.contains(event.target as Node);
     const isInsideActions = blockActionsRef.current?.contains(event.target as Node);
 
-    if (!isInsideEditor) return hideBlockActions();
+    // if (!isInsideEditor) return hideBlockActions();
     if (editor.readOnly) return;
     if (isInsideActions) return;
 

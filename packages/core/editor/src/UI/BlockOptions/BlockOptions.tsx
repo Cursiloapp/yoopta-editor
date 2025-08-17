@@ -125,35 +125,6 @@ const BlockOptions = ({ isOpen, onClose, refs, style, actions = DEFAULT_ACTIONS,
                     Duplicate
                   </button>
                 </BlockOptionsMenuItem>
-                {!!ActionMenu && !isVoidElement && !editor.blocks[currentBlock?.type || '']?.hasCustomEditor && (
-                  <BlockOptionsMenuItem>
-                    {isActionMenuMounted && (
-                      <Portal id="yoo-block-options-portal">
-                        <Overlay lockScroll className="yoo-editor-z-[100]" onClick={() => setIsActionMenuOpen(false)}>
-                          <div style={actionMenuStyles} ref={actionMenuRefs.setFloating}>
-                            {/* @ts-ignore - fixme */}
-                            <ActionMenu {...actionMenuRenderProps} />
-                          </div>
-                        </Overlay>
-                      </Portal>
-                    )}
-                    <button
-                      type="button"
-                      className="yoopta-block-options-button"
-                      ref={actionMenuRefs.setReference}
-                      onClick={() => setIsActionMenuOpen((open) => !open)}
-                    >
-                      <TurnIcon className="yoo-editor-w-4 yoo-editor-h-4 yoo-editor-mr-2" />
-                      Turn into
-                    </button>
-                  </BlockOptionsMenuItem>
-                )}
-                <BlockOptionsMenuItem>
-                  <button type="button" className="yoopta-block-options-button" onClick={onCopy}>
-                    <Link2Icon className="yoo-editor-w-4 yoo-editor-h-4 yoo-editor-mr-2" />
-                    Copy link to block
-                  </button>
-                </BlockOptionsMenuItem>
               </BlockOptionsMenuGroup>
             )}
             {children}
