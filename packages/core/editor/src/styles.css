@@ -43,7 +43,7 @@
 
 /* Block styles  */
 .yoopta-block {
-  @apply yoo-editor-relative yoo-editor-py-0 yoo-editor-px-[0px] yoo-editor-mt-[2px] yoo-editor-mb-[1px] yoo-editor-rounded;
+  @apply yoo-editor-relative yoo-editor-py-0 yoo-editor-px-[2px] yoo-editor-mt-[2px] yoo-editor-mb-[1px] yoo-editor-rounded;
 }
 
 .yoopta-selection-block {
