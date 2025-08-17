@@ -16,6 +16,7 @@ import { useState } from 'react';
 import { Loader } from './Loader';
 import { flip, inline, offset, shift, useFloating } from '@floating-ui/react';
 import { InputAltText } from './InputAltText';
+import { limitSizes } from '../utils/limitSizes';
 
 const ALIGN_ICONS = {
   left: TextAlignLeftIcon,
@@ -126,18 +127,34 @@ const ImageBlockOptions = ({ editor, block, props: imageProps }: Props) => {
       const data = await options?.onUpload(file);
       const defaultImageProps = editor.plugins.Image.elements.image.props as ImageElementProps;
 
-      Elements.updateElement<ImagePluginElements, ImageElementProps>(editor, block.id, {
-        type: 'image',
-        props: {
-          src: data.src,
-          alt: data.alt,
-          sizes: data.sizes || defaultImageProps.sizes,
-          bgColor: imageProps?.bgColor || data.bgColor || defaultImageProps.bgColor,
-          fit: imageProps?.fit || data.fit || defaultImageProps.fit || 'fill',
-        },
-      });
+      const image = new window.Image();
+      image.src = data.src;
+      image.onload = () => {
+        const newSizes = { width: image.naturalWidth, height: image.naturalHeight };
+        const maxSizes = (editor.plugins.Image.options as ImagePluginOptions)?.maxSizes;
+        const limitedSizes = limitSizes(newSizes, {
+          width: maxSizes!.maxWidth!,
+          height: maxSizes!.maxHeight!,
+        });
+
+        Elements.updateElement<ImagePluginElements, ImageElementProps>(editor, block.id, {
+          type: 'image',
+          props: {
+            src: data.src,
+            alt: data.alt,
+            sizes: limitedSizes,
+            bgColor: imageProps?.bgColor || data.bgColor || defaultImageProps.bgColor,
+            fit: imageProps?.fit || data.fit || defaultImageProps.fit || 'fill',
+          },
+        });
+        onSetLoading(false);
+      };
+      image.onerror = error => {
+        options?.onError?.(error);
+        onSetLoading(false);
+      };
     } catch (error) {
-    } finally {
+      options?.onError?.(error);
       onSetLoading(false);
     }
   };

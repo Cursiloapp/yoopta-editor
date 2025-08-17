@@ -24,26 +24,35 @@ const FileUploader = ({ accept = 'image/*', onClose, blockId, onSetLoading }: Pr
     try {
       const data = await options?.onUpload(file);
       const defaultImageProps = editor.plugins.Image.elements.image.props as ImageElementProps;
-      const sizes = data.sizes || defaultImageProps.sizes;
-      const maxSizes = (editor.plugins.Image.options as ImagePluginOptions)?.maxSizes;
-      const limitedSizes = limitSizes(sizes!, {
-        width: maxSizes!.maxWidth!,
-        height: maxSizes!.maxHeight!,
-      });
 
-      Elements.updateElement<ImagePluginElements, ImageElementProps>(editor, blockId, {
-        type: 'image',
-        props: {
-          src: data.src,
-          alt: data.alt,
-          sizes: limitedSizes,
-          bgColor: data.bgColor || defaultImageProps.bgColor,
-          fit: data.fit || defaultImageProps.fit || 'fill',
-        },
-      });
+      const image = new window.Image();
+      image.src = data.src;
+      image.onload = () => {
+        const newSizes = { width: image.naturalWidth, height: image.naturalHeight };
+        const maxSizes = (editor.plugins.Image.options as ImagePluginOptions)?.maxSizes;
+        const limitedSizes = limitSizes(newSizes, {
+          width: maxSizes!.maxWidth!,
+          height: maxSizes!.maxHeight!,
+        });
+
+        Elements.updateElement<ImagePluginElements, ImageElementProps>(editor, blockId, {
+          type: 'image',
+          props: {
+            src: data.src,
+            alt: data.alt,
+            sizes: limitedSizes,
+            bgColor: data.bgColor || defaultImageProps.bgColor,
+            fit: data.fit || defaultImageProps.fit || 'fill',
+          },
+        });
+        onSetLoading(false);
+      };
+      image.onerror = (error) => {
+        options?.onError?.(error);
+        onSetLoading(false);
+      };
     } catch (error) {
       options?.onError?.(error);
-    } finally {
       onSetLoading(false);
     }
   };
