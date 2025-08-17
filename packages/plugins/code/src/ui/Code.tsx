@@ -62,7 +62,7 @@ const CodeEditor = ({ blockId }: PluginCustomEditorRenderProps) => {
     <div
       data-element-type="code"
       data-custom-editor
-      className="yoo-code-rounded-md yoo-code-mt-2 yoo-code-p-0 yoopta-code"
+      className="rounded-md mt-2 p-0 yoopta-code"
       onMouseDown={onClick}
     >
       <div contentEditable={false}>

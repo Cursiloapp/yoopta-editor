@@ -40,14 +40,14 @@ const EmbedComponent = ({ width, height, provider, blockId, attributes, children
   }
 
   return (
-    <div className="yoo-embed-w-full" {...attributes}>
+    <div className="w-full" {...attributes}>
       <iframe
         src={provider.url}
         width="100%"
         height="100%"
         frameBorder={0}
         allowFullScreen
-        className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
+        className="absolute top-0 left-0 rounded-[3px]"
       />
       {children}
     </div>

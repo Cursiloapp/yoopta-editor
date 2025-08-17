@@ -127,8 +127,8 @@ const Toolbar = ({ render }: ToolbarToolProps) => {
     const RenderComponent = render;
 
     return (
-      <Portal id="yoo-toolbar-portal">
-        <div style={style} ref={refs.setFloating} className="yoo-toolbar-z-[99]" onClick={(e) => e.stopPropagation()}>
+      <Portal id="portal">
+        <div style={style} ref={refs.setFloating} className="z-[99]" onClick={(e) => e.stopPropagation()}>
           <RenderComponent activeBlock={activeBlock} editor={editor} toggleHoldToolbar={toggleHoldToolbar} />
         </div>
       </Portal>
@@ -137,8 +137,8 @@ const Toolbar = ({ render }: ToolbarToolProps) => {
 
   return (
     // [TODO] - take care about SSR
-    <Portal id="yoo-toolbar-portal text-[#000]">
-      <div style={style} ref={refs.setFloating} className="yoo-toolbar-z-[99]" onClick={(e) => e.stopPropagation()}>
+    <Portal id="portal text-[#000]">
+      <div style={style} ref={refs.setFloating} className="z-[99]" onClick={(e) => e.stopPropagation()}>
         <DefaultToolbarRender activeBlock={activeBlock} editor={editor} toggleHoldToolbar={toggleHoldToolbar} />
       </div>
     </Portal>

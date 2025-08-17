@@ -63,15 +63,15 @@ const FileUploader = ({ accept = 'image/*', onClose, blockId, onSetLoading }: Pr
   };
 
   return (
-    <div className="yoo-image-user-select-none yoo-image-transition-bg yoo-image-duration-20 yoo-image-ease-in yoo-image-white-space-nowrap yoo-image-rounded-[4px] yoo-image-h-[32px] yoo-image-px-[12px] yoo-image-border yoo-image-border-solid yoo-image-border-[rgba(55,53,47,0.16)] yoo-image-w-full yoo-image-cursor-pointer yoo-image-bg-[#fe4a55] yoo-image-text-[#fff]">
+    <div className="user-select-none transition-bg duration-20 ease-in white-space-nowrap rounded-[4px] h-[32px] px-[12px] border border-solid border-[rgba(55,53,47,0.16)] w-full cursor-pointer bg-[#fe4a55] text-[#fff]">
       <label
         htmlFor="image-uploader"
-        className="yoo-image-text-[14px] yoo-image-leading-[1.2] yoo-image-font-medium yoo-image-cursor-pointer yoo-image-w-full yoo-image-flex yoo-image-items-center yoo-image-justify-center yoo-image-h-full"
+        className="text-[14px] leading-[1.2] font-medium cursor-pointer w-full flex items-center justify-center h-full"
       >
         <input
           type="file"
           id="image-uploader"
-          className="yoo-image-absolute yoo-image-left-0 yoo-image-top-0 yoo-image-invisible"
+          className="absolute left-0 top-0 invisible"
           accept={options?.accept || accept}
           onChange={onChange}
           multiple={false}

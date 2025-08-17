@@ -32,16 +32,16 @@ const EmbedLinkUploader = ({ blockId, onClose }) => {
 
   // shared button class with yoo-embed prefix
   const baseButtonClass =
-    'yoo-embed-w-full yoo-embed-mt-[8px] yoo-embed-user-select-none yoo-embed-transition-bg yoo-embed-duration-20 yoo-embed-ease-in yoo-embed-cursor-pointer yoo-embed-flex yoo-embed-items-center yoo-embed-justify-center yoo-embed-white-space-nowrap yoo-embed-h-[32px] yoo-embed-rounded-[4px] yoo-embed-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-embed-bg-[rgba(254,74,85,1)] yoo-embed-text-white yoo-embed-leading-[1.2] yoo-embed-px-[12px] yoo-embed-text-[14px] yoo-embed-font-medium disabled:yoo-embed-bg-[rgba(254,74,85,0.5)] disabled:yoo-embed-cursor-not-allowed';
+    'w-full mt-[8px] user-select-none transition-bg duration-20 ease-in cursor-pointer flex items-center justify-center white-space-nowrap h-[32px] rounded-[4px] shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] bg-[rgba(254,74,85,1)] text-white leading-[1.2] px-[12px] text-[14px] font-medium disabled:bg-[rgba(254,74,85,0.5)] disabled:cursor-not-allowed';
 
   return (
-    <div className="yoo-embed-w-full">
+    <div className="w-full">
       <input
         type="text"
         placeholder="Paste embed link"
         value={value}
         onChange={onChange}
-        className="yoo-embed-items-center yoo-embed-bg-[hsla(45,13%,94%,.6)] yoo-embed-rounded-[4px] yoo-embed-shadow-[inset_0_0_0_1px_hsla(0,0%,6%,.1)] yoo-embed-cursor-text yoo-embed-flex yoo-embed-text-[14px] yoo-embed-h-[32px] yoo-embed-leading-[20px] yoo-embed-px-[6px] yoo-embed-relative yoo-embed-w-full yoo-embed-border-none"
+        className="items-center bg-[hsla(45,13%,94%,.6)] rounded-[4px] shadow-[inset_0_0_0_1px_hsla(0,0%,6%,.1)] cursor-text flex text-[14px] h-[32px] leading-[20px] px-[6px] relative w-full border-none"
       />
       <button type="button" className={baseButtonClass} disabled={isEmpty} onClick={embed}>
         Embed link

@@ -79,7 +79,7 @@ const LinkHoverPreview = ({ style, setFloating, element, setHoldLinkTool, blockI
     <Portal id="yoopta-link-preview">
       {isLinkToolMounted && hasLinkTool && (
         <Portal id="yoopta-link-tool">
-          <Overlay lockScroll className="yoo-link-z-[100]" onClick={onClose}>
+          <Overlay lockScroll className="z-[100]" onClick={onClose}>
             <div ref={linkToolRefs.setFloating} style={linkToolEditStyles} onClick={(e) => e.stopPropagation()}>
               <LinkTool editor={editor} link={element.props} onSave={onSave} onDelete={onDelete} withTitle={false} />
             </div>

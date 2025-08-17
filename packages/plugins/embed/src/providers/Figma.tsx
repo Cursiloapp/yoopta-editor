@@ -16,13 +16,13 @@ const Figma = ({ provider, width, height, attributes, children }: ProviderRender
   };
 
   return (
-    <div className="yoo-embed-relative" {...attributes} ref={onRef}>
+    <div className="relative" {...attributes} ref={onRef}>
       {isInViewport && (
         <iframe
           src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(provider?.url || '')}`}
           frameBorder={0}
           allowFullScreen
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
+          className="absolute top-0 left-0 rounded-[3px]"
           width={width}
           height={height}
         />

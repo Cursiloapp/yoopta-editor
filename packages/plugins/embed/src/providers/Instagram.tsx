@@ -23,7 +23,7 @@ const Instagram: React.FC<InstagramProps> = ({ provider, width, height, attribut
   });
 
   return (
-    <div className="yoo-embed-w-full yoo-embed-h-full" {...attributes}>
+    <div className="w-full h-full" {...attributes}>
       <div ref={instagramRootRef}>
         {isInViewport && (
           <iframe
@@ -34,7 +34,7 @@ const Instagram: React.FC<InstagramProps> = ({ provider, width, height, attribut
             scrolling="no"
             allowTransparency
             allowFullScreen
-            className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
+            className="absolute top-0 left-0 rounded-[3px]"
           />
         )}
         {children}

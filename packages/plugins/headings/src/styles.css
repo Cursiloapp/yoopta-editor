@@ -1,13 +1,13 @@
 @tailwind utilities;
 
 .yoopta-heading-one {
-  @apply yoo-h-mt-6 yoo-h-mb-2 yoo-h-scroll-m-20 yoo-h-text-4xl yoo-h-font-bold yoo-h-tracking-tight
+  @apply mt-6 mb-2 scroll-m-20 text-4xl font-bold tracking-tight
 }
 
 .yoopta-heading-two {
-  @apply yoo-h-scroll-m-20 yoo-h-mt-4 yoo-h-mb-2 yoo-h-text-3xl yoo-h-font-semibold yoo-h-tracking-tight
+  @apply scroll-m-20 mt-4 mb-2 text-3xl font-semibold tracking-tight
 }
 
 .yoopta-heading-three {
-  @apply yoo-h-mt-2 yoo-h-mb-1 yoo-h-scroll-m-20 yoo-h-text-2xl yoo-h-font-semibold yoo-h-tracking-tight
+  @apply mt-2 mb-1 scroll-m-20 text-2xl font-semibold tracking-tight
 }

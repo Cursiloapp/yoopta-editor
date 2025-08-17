@@ -16,13 +16,13 @@ function YouTubePlayer({ videoId, children, attributes, ...other }) {
   };
 
   return (
-    <div {...attributes} ref={onRef} className="yoo-video-relative">
+    <div {...attributes} ref={onRef} className="relative">
       <img
         src={`https://i.ytimg.com/vi/${videoId}/default.jpg`}
         alt="youtube_video_preview"
         width="100%"
         height="100%"
-        className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0 yoo-video-w-full yoo-video-h-full"
+        className="absolute top-0 left-0 w-full h-full"
         style={{
           opacity: isInViewport && isFrameLoaded ? 0 : 1,
           zIndex: isInViewport && isFrameLoaded ? -1 : 0,
@@ -36,7 +36,7 @@ function YouTubePlayer({ videoId, children, attributes, ...other }) {
           frameBorder={0}
           onLoad={() => setFrameLoaded(true)}
           allowFullScreen
-          className="yoo-video-absolute yoo-video-top-0 yoo-video-left-0 yoo-video-rounded-[3px]"
+          className="absolute top-0 left-0 rounded-[3px]"
           {...other}
         />
       )}

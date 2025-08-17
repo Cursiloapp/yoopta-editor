@@ -5,6 +5,5 @@ export default createRollupConfig({
   pkg,
   tailwindConfig: {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-    prefix: 'yoo-accordion-',
   },
 });

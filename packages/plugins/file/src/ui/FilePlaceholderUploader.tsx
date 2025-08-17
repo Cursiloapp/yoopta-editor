@@ -25,11 +25,11 @@ const FilePlaceholderUploader = ({
   arrowRef,
 }: Props) => {
   return (
-    <Portal id="yoo-file-uploader-portal">
-      <Overlay lockScroll className="yoo-file-z-[100]" onClick={onClose}>
+    <Portal id="uploader-portal">
+      <Overlay lockScroll className="z-[100]" onClick={onClose}>
         <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
-          <div className="yoo-file-flex yoo-file-flex-col yoo-file-rounded-[6px] yoo-file-min-w-[540px] yoo-file-max-w-[calc(100vw-24px)] yoo-file-h-full yoo-file-max-h-[420px] yoo-file-bg-[#FFFFFF] yoo-file-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
-            <div className="yoo-file-p-[6px] yoo-file-flex yoo-file-justify-center">
+          <div className="flex flex-col rounded-[6px] min-w-[540px] max-w-[calc(100vw-24px)] h-full max-h-[420px] bg-[#FFFFFF] shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
+            <div className="p-[6px] flex justify-center">
               <FileUploader onClose={onClose} blockId={blockId} onSetLoading={onSetLoading} />
             </div>
           </div>

@@ -38,111 +38,111 @@ const CalloutBlockOptions = ({ editor, block, props: calloutProps }: Props) => {
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-block-options-button yoo-callout-justify-between"
+            className="yoopta-block-options-button justify-between"
             onClick={() => onChangeTheme('default')}
             style={{
               backgroundColor: isActiveTheme('default') ? CALLOUT_THEME_STYLES.default.backgroundColor : undefined,
             }}
           >
-            <span className="yoo-callout-flex">
+            <span className="flex">
               <DefaultIcon
                 width={16}
                 height={16}
                 color={CALLOUT_THEME_STYLES.default.color}
-                className="yoo-callout-w-4 yoo-callout-h-4 yoo-callout-mr-2"
+                className="w-4 h-4 mr-2"
               />
               Default
             </span>
             {isActiveTheme('default') && (
-              <CheckmarkIcon width={16} height={16} color="#000" className="yoo-callout-w-4 yoo-callout-h-4" />
+              <CheckmarkIcon width={16} height={16} color="#000" className="w-4 h-4" />
             )}
           </button>
         </BlockOptionsMenuItem>
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-block-options-button yoo-callout-justify-between"
+            className="yoopta-block-options-button justify-between"
             onClick={() => onChangeTheme('info')}
             style={{ backgroundColor: isActiveTheme('info') ? CALLOUT_THEME_STYLES.info.backgroundColor : undefined }}
           >
-            <span className="yoo-callout-flex">
+            <span className="flex">
               <InfoIcon
                 width={16}
                 height={16}
                 color={CALLOUT_THEME_STYLES.info.color}
-                className="yoo-callout-w-4 yoo-callout-h-4 yoo-callout-mr-2"
+                className="w-4 h-4 mr-2"
               />
               Info
             </span>
             {isActiveTheme('info') && (
-              <CheckmarkIcon width={16} height={16} color="#000" className="yoo-callout-w-4 yoo-callout-h-4" />
+              <CheckmarkIcon width={16} height={16} color="#000" className="w-4 h-4" />
             )}
           </button>
         </BlockOptionsMenuItem>
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-block-options-button yoo-callout-justify-between"
+            className="yoopta-block-options-button justify-between"
             onClick={() => onChangeTheme('success')}
             style={{
               backgroundColor: isActiveTheme('success') ? CALLOUT_THEME_STYLES.success.backgroundColor : undefined,
             }}
           >
-            <span className="yoo-callout-flex">
+            <span className="flex">
               <SuccessIcon
                 width={16}
                 height={16}
                 color={CALLOUT_THEME_STYLES.success.color}
-                className="yoo-callout-w-4 yoo-callout-h-4 yoo-callout-mr-2"
+                className="w-4 h-4 mr-2"
               />
               Success
             </span>
             {isActiveTheme('success') && (
-              <CheckmarkIcon width={16} height={16} color="#000" className="yoo-callout-w-4 yoo-callout-h-4" />
+              <CheckmarkIcon width={16} height={16} color="#000" className="w-4 h-4" />
             )}
           </button>
         </BlockOptionsMenuItem>
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-block-options-button yoo-callout-justify-between"
+            className="yoopta-block-options-button justify-between"
             onClick={() => onChangeTheme('warning')}
             style={{
               backgroundColor: isActiveTheme('warning') ? CALLOUT_THEME_STYLES.warning.backgroundColor : undefined,
             }}
           >
-            <span className="yoo-callout-flex">
+            <span className="flex">
               <WarningIcon
                 width={16}
                 height={16}
                 color={CALLOUT_THEME_STYLES.warning.color}
-                className="yoo-callout-w-4 yoo-callout-h-4 yoo-callout-mr-2"
+                className="w-4 h-4 mr-2"
               />
               Warning
             </span>
             {isActiveTheme('warning') && (
-              <CheckmarkIcon width={16} height={16} color="#000" className="yoo-callout-w-4 yoo-callout-h-4" />
+              <CheckmarkIcon width={16} height={16} color="#000" className="w-4 h-4" />
             )}
           </button>
         </BlockOptionsMenuItem>
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-block-options-button yoo-callout-justify-between"
+            className="yoopta-block-options-button justify-between"
             onClick={() => onChangeTheme('error')}
             style={{ backgroundColor: isActiveTheme('error') ? CALLOUT_THEME_STYLES.error.backgroundColor : undefined }}
           >
-            <span className="yoo-callout-flex">
+            <span className="flex">
               <ErrorIcon
                 width={16}
                 height={16}
                 color={CALLOUT_THEME_STYLES.error.color}
-                className="yoo-callout-w-4 yoo-callout-h-4 yoo-callout-mr-2"
+                className="w-4 h-4 mr-2"
               />
               Error
             </span>
             {isActiveTheme('error') && (
-              <CheckmarkIcon width={16} height={16} color="#000" className="yoo-callout-w-4 yoo-callout-h-4" />
+              <CheckmarkIcon width={16} height={16} color="#000" className="w-4 h-4" />
             )}
           </button>
         </BlockOptionsMenuItem>

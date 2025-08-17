@@ -6,7 +6,7 @@ export const AccordionListItem = ({ extendRender, ...props }: PluginElementRende
   if (extendRender) return extendRender(props);
 
   return (
-    <div {...attributes} className="yoo-accordion-border-b">
+    <div {...attributes} className="border-b">
       {children}
     </div>
   );

@@ -1,9 +1,9 @@
 @tailwind utilities;
 
 .yoopta-action-menu-list {
-  @apply yoo-action-menu-absolute yoo-action-menu-z-[9999] yoo-action-menu-m-0 yoo-action-menu-left-0 yoo-action-menu-top-0 yoo-action-menu-right-auto yoo-action-menu-bottom-auto;
+  @apply absolute z-[9999] m-0 left-0 top-0 right-auto bottom-auto;
 }
 
 .yoopta-action-menu-list-content {
-  @apply yoo-action-menu-bg-[#FFFFFF] yoo-action-menu-z-50 yoo-action-menu-h-auto yoo-action-menu-max-h-[330px] yoo-action-menu-w-72 yoo-action-menu-overflow-y-auto yoo-action-menu-rounded-md yoo-action-menu-border yoo-action-menu-border-solid yoo-action-menu-border-[#e5e7eb] yoo-action-menu-px-1 yoo-action-menu-py-2 yoo-action-menu-transition-all yoo-action-menu-shadow-md;
+  @apply bg-[#FFFFFF] z-50 h-auto max-h-[330px] w-72 overflow-y-auto rounded-md border border-solid border-[#e5e7eb] px-1 py-2 transition-all shadow-md;
 }
