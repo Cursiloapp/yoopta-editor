@@ -41,47 +41,87 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
   const blockSelected = useBlockSelected({ blockId });
 
   const resizeProps: ResizableProps = useMemo(
-    () => ({
-      minWidth: 300,
-      size: { width: sizes.width, height: sizes.height },
-      lockAspectRatio: true,
-      resizeRatio: 2,
-      enable: {
-        left: !isReadOnly,
-        right: !isReadOnly,
-      },
-      handleStyles: {
-        left: { left: 0 },
-        right: { right: 0 },
-      },
-      onResize: (e, direction, ref) => {
-        if (isReadOnly) return;
-        setSizes({ width: ref.offsetWidth, height: ref.offsetHeight });
-      },
-      onResizeStop: (e, direction, ref) => {
-        if (isReadOnly) return;
-        Elements.updateElement(editor, blockId, {
-          type: 'image',
-          props: {
-            sizes: { width: ref.offsetWidth, height: ref.offsetHeight },
-          },
-        });
-      },
-      handleComponent: {
-        left: isReadOnly ? <></> : <Resizer position="left" />,
-        right: isReadOnly ? <></> : <Resizer position="right" />,
-      },
-    }),
-    [
-      sizes.width,
-      sizes.height,
-      pluginOptions?.maxSizes?.maxWidth,
-      pluginOptions?.maxSizes?.maxHeight,
-      isReadOnly,
-      editor,
-      blockId,
-    ],
-  );
+    () => {
+      // Get the maximum width from editor container to prevent overflow
+      const getMaxWidth = () => {
+        if (pluginOptions?.maxSizes?.maxWidth) {
+          return pluginOptions.maxSizes.maxWidth;
+        }
+        
+        // Get the editor container width and subtract some padding to prevent overflow
+        if (editor.refElement) {
+          const containerWidth = editor.refElement.getBoundingClientRect().width;
+          // Subtract padding (typically 2px on each side) to ensure image doesn't overflow
+          return Math.max(300, containerWidth - 8);
+        }
+        
+        // Fallback to a reasonable default
+        return 762;
+      };
+
+      // Get the maximum height from the actual image dimensions
+      const getMaxHeight = () => {
+        if (pluginOptions?.maxSizes?.maxHeight) {
+          return pluginOptions.maxSizes.maxHeight;
+        }
+        
+        // Try to get the natural height from the image element
+        if (src) {
+          const imgElement = document.querySelector(`[data-yoopta-block-id="${blockId}"] img`) as HTMLImageElement;
+          if (imgElement && imgElement.naturalHeight > 0) {
+            return imgElement.naturalHeight;
+          }
+        }
+        
+        // Fallback to a reasonable default
+        return 900;
+      };
+
+      return {
+        minWidth: 300,
+        size: { width: sizes.width, height: sizes.height },
+        maxWidth: getMaxWidth(),
+        maxHeight: getMaxHeight(),
+        lockAspectRatio: true,
+            resizeRatio: 2,
+            enable: {
+              left: !isReadOnly,
+              right: !isReadOnly,
+            },
+            handleStyles: {
+              left: { left: 0 },
+              right: { right: 0 },
+            },
+            onResize: (e, direction, ref) => {
+              if (isReadOnly) return;
+              setSizes({ width: ref.offsetWidth, height: ref.offsetHeight });
+            },
+            onResizeStop: (e, direction, ref) => {
+              if (isReadOnly) return;
+              Elements.updateElement(editor, blockId, {
+                type: 'image',
+                props: {
+                  sizes: { width: ref.offsetWidth, height: ref.offsetHeight },
+                },
+              });
+            },
+            handleComponent: {
+              left: isReadOnly ? <></> : <Resizer position="left" />,
+              right: isReadOnly ? <></> : <Resizer position="right" />,
+            },
+          };
+        },
+        [
+          sizes.width,
+          sizes.height,
+          pluginOptions?.maxSizes?.maxWidth,
+          pluginOptions?.maxSizes?.maxHeight,
+          isReadOnly,
+          editor,
+          blockId,
+          src,
+        ],
+      );
 
   if (!src) {
     if (isReadOnly) return <></>;
