@@ -16,7 +16,7 @@ const BlockOptionsMenuGroup = ({ children }) => <div className="yoopta-block-opt
 const BlockOptionsMenuContent = ({ children }) => (
   <div
     onClick={(e) => e.stopPropagation()}
-    className="yoopta-block-options-menu-content data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+    className="yoopta-block-options-menu-content data-[state=open]:yoo-editor-animate-in data-[state=closed]:yoo-editor-animate-out data-[state=closed]:yoo-editor-fade-out-0 data-[state=open]:yoo-editor-fade-in-0 data-[state=closed]:yoo-editor-zoom-out-95 data-[state=open]:yoo-editor-zoom-in-95 data-[side=bottom]:yoo-editor-slide-in-from-top-2 data-[side=left]:yoo-editor-slide-in-from-right-2 data-[side=right]:yoo-editor-slide-in-from-left-2 data-[side=top]:yoo-editor-slide-in-from-bottom-2"
   >
     {children}
   </div>
@@ -108,20 +108,20 @@ const BlockOptions = ({ isOpen, onClose, refs, style, actions = DEFAULT_ACTIONS,
   return (
     // [TODO] - take care about SSR
     <Portal id="yoo-block-options-portal">
-      <Overlay lockScroll className="z-[100]" onClick={onClose}>
+      <Overlay lockScroll className="yoo-editor-z-[100]" onClick={onClose}>
         <div style={style} ref={refs.setFloating} contentEditable={false}>
           <BlockOptionsMenuContent>
             {actions !== null && (
               <BlockOptionsMenuGroup>
                 <BlockOptionsMenuItem>
                   <button type="button" className="yoopta-block-options-button" onClick={onDelete}>
-                    <TrashIcon className="w-4 h-4 mr-2" />
+                    <TrashIcon className="yoo-editor-w-4 yoo-editor-h-4 yoo-editor-mr-2" />
                     Delete
                   </button>
                 </BlockOptionsMenuItem>
                 <BlockOptionsMenuItem>
                   <button type="button" className="yoopta-block-options-button" onClick={onDuplicate}>
-                    <CopyIcon className="w-4 h-4 mr-2" />
+                    <CopyIcon className="yoo-editor-w-4 yoo-editor-h-4 yoo-editor-mr-2" />
                     Duplicate
                   </button>
                 </BlockOptionsMenuItem>

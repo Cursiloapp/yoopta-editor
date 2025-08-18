@@ -54,18 +54,18 @@ const FileUploader = ({ accept = 'video/*', onClose, blockId, onSetLoading }: Pr
   };
 
   const baseButtonClass =
-    'w-full user-select-none transition-bg duration-20 ease-in cursor-pointer flex items-center justify-center white-space-nowrap h-[32px] rounded-[4px] shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] bg-[rgba(254,74,85,1)] text-white leading-[1.2] px-[12px] text-[14px] font-medium';
+    'yoo-video-w-full yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-cursor-pointer yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-white-space-nowrap yoo-video-h-[32px] yoo-video-rounded-[4px] yoo-video-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-video-bg-[rgba(254,74,85,1)] yoo-video-text-white yoo-video-leading-[1.2] yoo-video-px-[12px] yoo-video-text-[14px] yoo-video-font-medium';
 
   return (
-    <div className="user-select-none transition-bg duration-20 ease-in white-space-nowrap w-full">
-      <div className="flex justify-between w-full items-center mt-2 mb-1">
+    <div className="yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-white-space-nowrap yoo-video-w-full">
+      <div className="yoo-video-flex yoo-video-justify-between yoo-video-w-full yoo-video-items-center yoo-video-mt-2 yoo-video-mb-1">
         {/* Upload Video Button */}
-        <div className="flex items-center w-full justify-start">
+        <div className="yoo-video-flex yoo-video-items-center yoo-video-w-full yoo-video-justify-start">
           <label htmlFor="video-uploader" className={baseButtonClass}>
             <input
               type="file"
               id="video-uploader"
-              className="absolute left-0 top-0 invisible h-[28px] rounded-[4px] shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] bg-[rgba(254,74,85,1)] text-white fill-white leading-[1.2] px-[12px] text-[14px] font-medium w-full"
+              className="yoo-video-absolute yoo-video-left-0 yoo-video-top-0 yoo-video-invisible yoo-video-h-[28px] yoo-video-rounded-[4px] yoo-video-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-video-bg-[rgba(254,74,85,1)] yoo-video-text-white yoo-video-fill-white yoo-video-leading-[1.2] yoo-video-px-[12px] yoo-video-text-[14px] yoo-video-font-medium yoo-video-w-full"
               accept={options?.accept || accept}
               onChange={onChange}
               multiple={false}

@@ -74,17 +74,17 @@ export const AccordionItemHeading = ({ extendRender, ...props }: PluginElementRe
     <div
       {...attributes}
       onClick={isReadOnly ? onToggleExpand : undefined}
-      className="yoopta-accordion-list-item-heading group"
+      className="yoopta-accordion-list-item-heading yoo-accordion-group"
     >
-      <span className="break-words hover:underline">{children}</span>
-      <div className="absolute right-[14px] z-10 top-1/2 -yoo-accordion-translate-y-1/2 flex gap-1 select-none">
+      <span className="yoo-accordion-break-words hover:yoo-accordion-underline">{children}</span>
+      <div className="yoo-accordion-absolute yoo-accordion-right-[14px] yoo-accordion-z-10 yoo-accordion-top-1/2 -yoo-accordion-translate-y-1/2 yoo-accordion-flex yoo-accordion-gap-1 yoo-accordion-select-none">
         {!isReadOnly && (
           <>
             <button
               type="button"
               contentEditable={false}
               onClick={onDeleteAccordionItem}
-              className="yoopta-button opacity-0 group-hover:opacity-100 transition-opacity"
+              className="yoopta-button yoo-accordion-opacity-0 group-hover:yoo-accordion-opacity-100 yoo-accordion-transition-opacity"
             >
               <TrashIcon strokeWidth={1} size={16} color="#000" />
             </button>
@@ -92,7 +92,7 @@ export const AccordionItemHeading = ({ extendRender, ...props }: PluginElementRe
               type="button"
               contentEditable={false}
               onClick={onAddAccordionItem}
-              className="yoopta-button mr-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="yoopta-button yoo-accordion-mr-2 yoo-accordion-opacity-0 group-hover:yoo-accordion-opacity-100 yoo-accordion-transition-opacity"
             >
               <Plus strokeWidth={1} size={20} color="#000" />
             </button>
@@ -104,7 +104,7 @@ export const AccordionItemHeading = ({ extendRender, ...props }: PluginElementRe
             size={20}
             color="#000"
             style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
-            className="transition-transform duration-200"
+            className="yoo-accordion-transition-transform yoo-accordion-duration-200"
           />
         </button>
       </div>

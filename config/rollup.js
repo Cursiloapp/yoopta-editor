@@ -12,7 +12,6 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 const postcssNesting = require('postcss-nesting');
 
-// const tailwindConfig = require('./tailwind.config.js');
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -43,10 +42,6 @@ function getPlugins({ tailwindConfig }) {
             extend: {},
           },
           plugins: [],
-          /* SHOULD BE REMOVED */
-          // corePlugins: {
-          //   preflight: false,
-          // },
           ...tailwindConfig,
           content: tailwindConfig?.content || ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
         }),
@@ -89,13 +84,6 @@ export function createRollupConfig({ pkg, tailwindConfig }) {
         file: `./${pkg.module}`,
         exports: 'named',
       },
-      // {
-      //   file: `./${pkg.main}`,
-      //   format: 'cjs',
-      //   globals: { react: 'React' },
-      //   exports: 'named',
-      //   sourcemap: isDev,
-      // },
     ],
     plugins: getPlugins({ tailwindConfig }),
     cache: isDev,

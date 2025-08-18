@@ -68,7 +68,7 @@ const VideoComponent = ({
   }
 
   return (
-    <div className="w-full" {...attributes}>
+    <div className="yoo-video-w-full" {...attributes}>
       {src && (
         <video
           preload="metadata"
@@ -77,7 +77,7 @@ const VideoComponent = ({
           width={width}
           height={height}
           onDragStart={(e) => e.preventDefault()}
-          className="object-cover w-full h-full rounded-[3px]"
+          className="yoo-video-object-cover yoo-video-w-full yoo-video-h-full yoo-video-rounded-[3px]"
           style={style}
           playsInline
           controls

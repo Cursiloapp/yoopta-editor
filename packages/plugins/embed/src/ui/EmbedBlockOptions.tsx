@@ -21,7 +21,7 @@ const EmbedBlockOptions = ({ editor, block, props: embedProps }: Props) => {
       <BlockOptionsMenuGroup>
         <BlockOptionsMenuItem>
           <button type="button" className="yoopta-block-options-button" onClick={onOpen}>
-            <ExternalLinkIcon width={16} height={16} className="w-4 h-4 mr-2" />
+            <ExternalLinkIcon width={16} height={16} className="yoo-embed-w-4 yoo-embed-h-4 yoo-embed-mr-2" />
             Open
           </button>
         </BlockOptionsMenuItem>

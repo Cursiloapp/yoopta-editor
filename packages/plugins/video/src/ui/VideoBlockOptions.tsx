@@ -119,35 +119,35 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
         <>
           <BlockOptionsMenuGroup>
             <BlockOptionsMenuItem>
-              <button type="button" className="yoopta-block-options-button justify-between" onClick={onFit}>
-                <span className="flex">
-                  <RowSpacingIcon width={16} height={16} className="w-4 h-4 mr-2" />
+              <button type="button" className="yoopta-block-options-button yoo-video-justify-between" onClick={onFit}>
+                <span className="yoo-video-flex">
+                  <RowSpacingIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
                   Fit
                 </span>
                 {videoProps?.fit === 'contain' && (
-                  <CheckmarkIcon width={16} height={16} className="w-4 h-4" />
+                  <CheckmarkIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4" />
                 )}
               </button>
             </BlockOptionsMenuItem>
             <BlockOptionsMenuItem>
-              <button type="button" className="yoopta-block-options-button justify-between" onClick={onFill}>
-                <span className="flex">
-                  <WidthIcon width={16} height={16} className="w-4 h-4 mr-2" />
+              <button type="button" className="yoopta-block-options-button yoo-video-justify-between" onClick={onFill}>
+                <span className="yoo-video-flex">
+                  <WidthIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
                   Fill
                 </span>
                 {videoProps?.fit === 'fill' && (
-                  <CheckmarkIcon width={16} height={16} className="w-4 h-4" />
+                  <CheckmarkIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4" />
                 )}
               </button>
             </BlockOptionsMenuItem>
             <BlockOptionsMenuItem>
-              <button type="button" className="yoopta-block-options-button justify-between" onClick={onCover}>
-                <span className="flex">
-                  <SizeIcon width={16} height={16} className="w-4 h-4 mr-2" />
+              <button type="button" className="yoopta-block-options-button yoo-video-justify-between" onClick={onCover}>
+                <span className="yoo-video-flex">
+                  <SizeIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
                   Cover
                 </span>
                 {videoProps?.fit === 'cover' && (
-                  <CheckmarkIcon width={16} height={16} className="w-4 h-4" />
+                  <CheckmarkIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4" />
                 )}
               </button>
             </BlockOptionsMenuItem>
@@ -161,7 +161,7 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
             <BlockOptionsMenuItem>
               <label
                 htmlFor="video-uploader"
-                className="rounded-sm relative hover:bg-[#37352f14] leading-[120%] px-2 py-1.5 mx-[4px] cursor-pointer w-full flex justify-start data-[disabled=true]:cursor-not-allowed data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50"
+                className="yoo-video-rounded-sm yoo-video-relative hover:yoo-video-bg-[#37352f14] yoo-video-leading-[120%] yoo-video-px-2 yoo-video-py-1.5 yoo-video-mx-[4px] yoo-video-cursor-pointer yoo-video-w-full yoo-video-flex yoo-video-justify-start data-[disabled=true]:yoo-video-cursor-not-allowed data-[disabled=true]:yoo-video-pointer-events-none data-[disabled=true]:yoo-video-opacity-50"
                 data-disabled={loaders.video}
               >
                 <input
@@ -169,14 +169,14 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
                   accept={options.accept}
                   multiple={false}
                   id="video-uploader"
-                  className="absolute hidden"
+                  className="yoo-video-absolute yoo-video-hidden"
                   onChange={onUpload}
                   disabled={loaders.video}
                 />
                 {loaders.video ? (
-                  <Loader className="mr-2 user-select-none" width={24} height={24} />
+                  <Loader className="yoo-video-mr-2 yoo-video-user-select-none" width={24} height={24} />
                 ) : (
-                  <UpdateIcon width={16} height={16} className="w-4 h-4 mr-2" />
+                  <UpdateIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
                 )}
                 Replace video
               </label>
@@ -190,7 +190,7 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
           <BlockOptionsMenuItem>
             <label
               htmlFor="video-poster-uploader"
-              className="rounded-sm relative hover:bg-[#37352f14] leading-[120%] px-2 py-1.5 mx-[4px] cursor-pointer w-full flex justify-start data-[disabled=true]:cursor-not-allowed data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50"
+              className="yoo-video-rounded-sm yoo-video-relative hover:yoo-video-bg-[#37352f14] yoo-video-leading-[120%] yoo-video-px-2 yoo-video-py-1.5 yoo-video-mx-[4px] yoo-video-cursor-pointer yoo-video-w-full yoo-video-flex yoo-video-justify-start data-[disabled=true]:yoo-video-cursor-not-allowed data-[disabled=true]:yoo-video-pointer-events-none data-[disabled=true]:yoo-video-opacity-50"
               data-disabled={loaders.poster}
             >
               <input
@@ -198,14 +198,14 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
                 accept="image/*"
                 multiple={false}
                 id="video-poster-uploader"
-                className="absolute hidden"
+                className="yoo-video-absolute yoo-video-hidden"
                 onChange={onUploadPoster}
                 disabled={loaders.poster}
               />
               {loaders.poster ? (
-                <Loader className="mr-2 user-select-none" width={24} height={24} />
+                <Loader className="yoo-video-mr-2 yoo-video-user-select-none" width={24} height={24} />
               ) : (
-                <ImageIcon width={16} height={16} className="w-4 h-4 mr-2" />
+                <ImageIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
               )}
               {videoProps?.poster ? 'Replace poster' : 'Add poster'}
             </label>
@@ -215,17 +215,17 @@ const VideoBlockOptions = ({ editor, block, props: videoProps }: Props) => {
         <BlockOptionsMenuItem>
           <button
             type="button"
-            className="yoopta-button rounded-sm hover:bg-[#37352f14] leading-[120%] px-2 py-1.5 mx-[4px] cursor-pointer w-full flex justify-start"
+            className="yoopta-button yoo-video-rounded-sm hover:yoo-video-bg-[#37352f14] yoo-video-leading-[120%] yoo-video-px-2 yoo-video-py-1.5 yoo-video-mx-[4px] yoo-video-cursor-pointer yoo-video-w-full yoo-video-flex yoo-video-justify-start"
             onClick={isExternalVideo ? onOpen : onDownload}
           >
             {isExternalVideo ? (
               <>
-                <ExternalLinkIcon width={16} height={16} className="w-4 h-4 mr-2" />
+                <ExternalLinkIcon width={16} height={16} className="yoo-embed-w-4 yoo-embed-h-4 yoo-embed-mr-2" />
                 Open
               </>
             ) : (
               <>
-                <DownloadIcon width={16} height={16} className="w-4 h-4 mr-2" />
+                <DownloadIcon width={16} height={16} className="yoo-video-w-4 yoo-video-h-4 yoo-video-mr-2" />
                 Download
               </>
             )}

@@ -16,11 +16,11 @@ const { Overlay, Portal } = UI;
 
 const EmbedUploader = ({ floatingStyles, refs, onClose, blockId, context, arrowRef }: Props) => {
   return (
-    <Portal id="uploader-portal">
-      <Overlay lockScroll className="z-[100]" onClick={onClose}>
+    <Portal id="yoo-embed-uploader-portal">
+      <Overlay lockScroll className="yoo-embed-z-[100]" onClick={onClose}>
         <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
-          <div className="flex flex-col rounded-[6px] min-w-[540px] max-w-[calc(100vw-24px)] h-full max-h-[420px] bg-[#FFFFFF] shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
-            <div className="pt-[6px] pb-[6px] flex justify-center mr-[6px] ml-[6px]">
+          <div className="yoo-embed-flex yoo-embed-flex-col yoo-embed-rounded-[6px] yoo-embed-min-w-[540px] yoo-embed-max-w-[calc(100vw-24px)] yoo-embed-h-full yoo-embed-max-h-[420px] yoo-embed-bg-[#FFFFFF] yoo-embed-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
+            <div className="yoo-embed-pt-[6px] yoo-embed-pb-[6px] yoo-embed-flex yoo-embed-justify-center yoo-embed-mr-[6px] yoo-embed-ml-[6px]">
               <EmbedLinkUploader onClose={onClose} blockId={blockId} />
             </div>
           </div>

@@ -87,11 +87,11 @@ const EmbedRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
     <div
       contentEditable={false}
       draggable={false}
-      className={`mt-4 relative flex ${alignClass} yoopta-embed`}
+      className={`yoo-embed-mt-4 yoo-embed-relative yoo-embed-flex ${alignClass} yoopta-embed`}
     >
-      <Resizable {...resizeProps} className="my-0 flex">
+      <Resizable {...resizeProps} className="yoo-embed-my-0 yoo-embed-flex">
         {blockSelected && (
-          <div className="absolute pointer-events-none inset-0 z-[81] rounded-[3px] opacity-100 transition-opacity duration-150 ease-in" />
+          <div className="yoo-embed-absolute yoo-embed-pointer-events-none yoo-embed-inset-0 yoo-embed-z-[81] yoo-embed-rounded-[3px] yoo-embed-opacity-100 yoo-embed-transition-opacity yoo-embed-duration-150 yoo-embed-ease-in" />
         )}
         {extendRender ? (
           extendRender(props)

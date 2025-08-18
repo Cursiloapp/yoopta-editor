@@ -52,7 +52,7 @@ export const CodeBlockOptions = ({ block, editor, element }: Props) => {
       <BlockOptionsMenuGroup>
         <BlockOptionsMenuItem>
           <button type="button" className="yoopta-block-options-button" onClick={onCopy}>
-            <CopyIcon className="w-4 h-4 mr-2" />
+            <CopyIcon className="yoo-code-w-4 yoo-code-h-4 yoo-code-mr-2" />
             {isCopied ? 'Copied' : 'Copy'}
           </button>
         </BlockOptionsMenuItem>
@@ -66,7 +66,7 @@ export const CodeBlockOptions = ({ block, editor, element }: Props) => {
             value={element.props?.theme || 'VSCode'}
           >
             <Trigger className="yoopta-block-options-button">
-              <ThemeIcon className="w-4 h-4 mr-2" />
+              <ThemeIcon className="yoo-code-w-4 yoo-code-h-4 yoo-code-mr-2" />
               Theme
             </Trigger>
           </Select>
@@ -84,7 +84,7 @@ export const CodeBlockOptions = ({ block, editor, element }: Props) => {
             value={element.props?.language || 'JavaScript'}
           >
             <Trigger className="yoopta-block-options-button">
-              <CodeIcon className="w-4 h-4 mr-2" />
+              <CodeIcon className="yoo-code-w-4 yoo-code-h-4 yoo-code-mr-2" />
               Language
             </Trigger>
           </Select>

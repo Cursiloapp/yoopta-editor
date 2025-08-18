@@ -17,10 +17,10 @@ export const AccordionItemContent = ({ extendRender, ...props }: PluginElementRe
   return (
     <div
       data-state={isExpanded ? 'open' : 'closed'}
-      className="yoopta-accordion-list-item-content data-[state=closed]:hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+      className="yoopta-accordion-list-item-content data-[state=closed]:yoo-accordion-hidden data-[state=closed]:yoo-accordion-animate-accordion-up data-[state=open]:yoo-accordion-animate-accordion-down"
       {...attributes}
     >
-      <div className="pb-4 pt-0">{children}</div>
+      <div className="yoo-accordion-pb-4 yoo-accordion-pt-0">{children}</div>
     </div>
   );
 };

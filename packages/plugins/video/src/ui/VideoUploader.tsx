@@ -31,18 +31,20 @@ const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading, c
   });
 
   return (
-    <Portal id="uploader-portal">
-      <Overlay lockScroll className="z-[100]" onClick={onClose}>
+    <Portal id="yoo-video-uploader-portal">
+      <Overlay lockScroll className="yoo-video-z-[100]" onClick={onClose}>
         <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
-          <div className="flex flex-col rounded-[6px] min-w-[540px] max-w-[calc(100vw-24px)] h-full max-h-[420px] bg-[#FFFFFF] shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
-            <div className="w-full flex text-[14px] p-[0_8px] shadow-[rgb(55_53_47_/9%)_0px_-1px_0px_inset] relative z-10 h-[40px]">
+          <div className="yoo-video-flex yoo-video-flex-col yoo-video-rounded-[6px] yoo-video-min-w-[540px] yoo-video-max-w-[calc(100vw-24px)] yoo-video-h-full yoo-video-max-h-[420px] yoo-video-bg-[#FFFFFF] yoo-video-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
+            <div className="yoo-video-w-full yoo-video-flex yoo-video-text-[14px] yoo-video-p-[0_8px] yoo-video-shadow-[rgb(55_53_47_/9%)_0px_-1px_0px_inset] yoo-video-relative yoo-video-z-10 yoo-video-h-[40px]">
               {/* Upload Button */}
               <button
                 type="button"
                 onClick={() => switchTab('upload')}
                 style={getTabStyles(isUploader)}
-                className={`yoopta-button py-[6px] whitespace-nowrap min-w-0 flex-shrink-0 relative cursor-pointer user-select-none bg-inherit transition-[height_20ms_ease-in] inline-flex items-center h-full text-[14px] leading-[1.2] px-[8px] ${ isUploader ? 'font-medium text-black'
-                    : 'font-medium text-[#808080]'
+                className={`yoopta-button yoo-video-py-[6px] yoo-video-whitespace-nowrap yoo-video-min-w-0 yoo-video-flex-shrink-0 yoo-video-relative yoo-video-cursor-pointer yoo-video-user-select-none yoo-video-bg-inherit yoo-video-transition-[height_20ms_ease-in] yoo-video-inline-flex yoo-video-items-center yoo-video-h-full yoo-video-text-[14px] yoo-video-leading-[1.2] yoo-video-px-[8px] ${
+                  isUploader
+                    ? 'yoo-video-font-medium yoo-video-text-black'
+                    : 'yoo-video-font-medium yoo-video-text-[#808080]'
                 }`}
               >
                 Upload
@@ -53,15 +55,17 @@ const VideoUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading, c
                 type="button"
                 onClick={() => switchTab('embed')}
                 style={getTabStyles(isEmbed)}
-                className={`yoopta-button py-[6px] whitespace-nowrap min-w-0 flex-shrink-0 relative cursor-pointer user-select-none bg-inherit transition-[height_20ms_ease-in] inline-flex items-center h-full text-[14px] leading-[1.2] px-[8px] ${ isEmbed ? 'font-medium text-black'
-                    : 'font-medium text-[#808080]'
+                className={`yoopta-button yoo-video-py-[6px] yoo-video-whitespace-nowrap yoo-video-min-w-0 yoo-video-flex-shrink-0 yoo-video-relative yoo-video-cursor-pointer yoo-video-user-select-none yoo-video-bg-inherit yoo-video-transition-[height_20ms_ease-in] yoo-video-inline-flex yoo-video-items-center yoo-video-h-full yoo-video-text-[14px] yoo-video-leading-[1.2] yoo-video-px-[8px] ${
+                  isEmbed
+                    ? 'yoo-video-font-medium yoo-video-text-black'
+                    : 'yoo-video-font-medium yoo-video-text-[#808080]'
                 }`}
               >
                 Video link
               </button>
             </div>
 
-            <div className="p-[6px] mt-[4px] flex justify-center">
+            <div className="yoo-video-p-[6px] yoo-video-mt-[4px] yoo-video-flex yoo-video-justify-center">
               {isEmbed && <EmbedUploader onClose={onClose} blockId={blockId} />}
               {isUploader && <FileUploader onClose={onClose} blockId={blockId} onSetLoading={onSetLoading} />}
             </div>

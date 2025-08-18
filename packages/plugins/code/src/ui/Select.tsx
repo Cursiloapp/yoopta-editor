@@ -9,11 +9,11 @@ const SelectValue: typeof SelectPrimitive.Value = SelectPrimitive.Value;
 const SelectTrigger = ({ children, className }) => {
   return (
     <SelectPrimitive.Trigger
-      className={`yoopta-code-select bg-[#fff] h-[20px] absolute top-[8px] left-[8px] z-20 min-w-[80px] max-w-[250px] w-auto flex h-9 items-center justify-between whitespace-nowrap rounded-sm border-solid border-[#e5e7eb] px-[5px] py-0 text-sm shadow-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 ${className}`}
+      className={`yoopta-code-select yoo-code-bg-[#fff] yoo-code-h-[20px] yoo-code-absolute yoo-code-top-[8px] yoo-code-left-[8px] yoo-code-z-20 yoo-code-min-w-[80px] yoo-code-max-w-[250px] yoo-code-w-auto yoo-code-flex yoo-code-h-9 yoo-code-items-center yoo-code-justify-between yoo-code-whitespace-nowrap yoo-code-rounded-sm yoo-code-border-solid yoo-code-border-[#e5e7eb] yoo-code-px-[5px] yoo-code-py-0 yoo-code-text-sm yoo-code-shadow-sm yoo-code-ring-offset-background focus:yoo-code-outline-none focus:yoo-code-ring-1 focus:yoo-code-ring-ring disabled:yoo-code-cursor-not-allowed disabled:yoo-code-opacity-50 [&>span]:yoo-code-line-clamp-1 ${className}`}
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <DownIcon className="h-4 w-4 opacity-50" />
+        <DownIcon className="yoo-code-h-4 yoo-code-w-4 yoo-code-opacity-50" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
@@ -25,7 +25,7 @@ const SelectContent = ({ children }) => {
   return (
     <SelectPrimitive.Portal container={editor.refElement}>
       <SelectPrimitive.Content
-        className="relative z-[120] max-h-96 min-w-[8rem] overflow-hidden rounded-md border-solid border-[#e3e3e3] bg-[#ffffff] text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[side=bottom]:translate-y-1 data-[side=left]:-yoo-code-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-yoo-code-translate-y-1"
+        className="yoo-code-relative yoo-code-z-[120] yoo-code-max-h-96 yoo-code-min-w-[8rem] yoo-code-overflow-hidden yoo-code-rounded-md yoo-code-border-solid yoo-code-border-[#e3e3e3] yoo-code-bg-[#ffffff] yoo-code-text-popover-foreground yoo-code-shadow-md data-[state=open]:yoo-code-animate-in data-[state=closed]:yoo-code-animate-out data-[state=closed]:yoo-code-fade-out-0 data-[state=open]:yoo-code-fade-in-0 data-[state=closed]:yoo-code-zoom-out-95 data-[state=open]:yoo-code-zoom-in-95 data-[side=bottom]:yoo-code-slide-in-from-top-2 data-[side=left]:yoo-code-slide-in-from-right-2 data-[side=right]:yoo-code-slide-in-from-left-2 data-[side=top]:yoo-code-slide-in-from-bottom-2 data-[side=bottom]:yoo-code-translate-y-1 data-[side=left]:-yoo-code-translate-x-1 data-[side=right]:yoo-code-translate-x-1 data-[side=top]:-yoo-code-translate-y-1"
         position="popper"
         side="left"
         align="center"
@@ -33,7 +33,7 @@ const SelectContent = ({ children }) => {
         sideOffset={5}
         id="yoo-select-content"
       >
-        <SelectPrimitive.Viewport className="p-1 h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]">
+        <SelectPrimitive.Viewport className="yoo-code-p-1 yoo-code-h-[var(--radix-select-trigger-height)] yoo-code-w-full yoo-code-min-w-[var(--radix-select-trigger-width)]">
           {children}
         </SelectPrimitive.Viewport>
       </SelectPrimitive.Content>
@@ -45,10 +45,10 @@ const SelectItem = ({ value, children, onChange }) => {
   return (
     <button
       type="button"
-      className="yoopta-button relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 pl-2 pr-2 text-sm outline-none focus:bg-[#eeeeee] focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      className="yoopta-button yoo-code-relative yoo-code-flex yoo-code-w-full yoo-code-cursor-pointer yoo-code-select-none yoo-code-items-center yoo-code-rounded-sm yoo-code-py-1.5 yoo-code-pl-2 yoo-code-pr-2 yoo-code-text-sm yoo-code-outline-none focus:yoo-code-bg-[#eeeeee] focus:yoo-code-text-accent-foreground data-[disabled]:yoo-code-pointer-events-none data-[disabled]:yoo-code-opacity-50"
       onClick={(e) => onChange(value)}
     >
-      <span className="capitalize flex justify-between items-center w-full">
+      <span className="yoo-code-capitalize yoo-code-flex yoo-code-justify-between yoo-code-items-center yoo-code-w-full">
         {children}
       </span>
     </button>

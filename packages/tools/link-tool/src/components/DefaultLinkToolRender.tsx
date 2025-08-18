@@ -38,7 +38,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
   };
 
   return (
-    <div className="yoopta-link-tool shadow-y-[4px]">
+    <div className="yoopta-link-tool yoo-link-tool-shadow-y-[4px]">
       {withTitle && (
         <div>
           <label htmlFor="title" className="yoopta-link-tool-label">
@@ -57,7 +57,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
         </div>
       )}
       {withLink && (
-        <div className={withTitle ? 'mt-2' : ''}>
+        <div className={withTitle ? 'yoo-link-tool-mt-2' : ''}>
           <label htmlFor="url" className="yoopta-link-tool-label">
             Link URL
           </label>
@@ -75,7 +75,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
       )}
       <button
         type="button"
-        className="yoopta-button yoopta-link-tool-label !font-[500] mt-2 !mb-0 !flex justify-between items-center w-full"
+        className="yoopta-button yoopta-link-tool-label !yoo-link-tool-font-[500] yoo-link-tool-mt-2 !yoo-link-tool-mb-0 !yoo-link-tool-flex yoo-link-tool-justify-between yoo-link-tool-items-center yoo-link-tool-w-full"
         onClick={() => setAdditionPropsOpen((p) => !p)}
       >
         Additional props
@@ -83,7 +83,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
       </button>
       {isAdditionalPropsOpen && (
         <>
-          <div className="mt-2">
+          <div className="yoo-link-tool-mt-2">
             <label htmlFor="target" className="yoopta-link-tool-label">
               Link target
             </label>
@@ -98,7 +98,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
               autoComplete="off"
             />
           </div>
-          <div className="mt-2">
+          <div className="yoo-link-tool-mt-2">
             <label htmlFor="rel" className="yoopta-link-tool-label">
               Link rel
             </label>
@@ -115,10 +115,10 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
           </div>
         </>
       )}
-      <div className="mt-2 flex justify-between">
+      <div className="yoo-link-tool-mt-2 yoo-link-tool-flex yoo-link-tool-justify-between">
         <button
           type="button"
-          className="yoopta-button bg-[#fe4a55] text-[#fff] text-sm font-medium py-[5px] px-[10px] rounded-md shadow-sm disabled:opacity-50"
+          className="yoopta-button yoo-link-tool-bg-[#fe4a55] yoo-link-tool-text-[#fff] yoo-link-tool-text-sm yoo-link-tool-font-medium yoo-link-tool-py-[5px] yoo-link-tool-px-[10px] yoo-link-tool-rounded-md yoo-link-tool-shadow-sm disabled:yoo-link-tool-opacity-50"
           disabled={!link.url}
           onClick={onSave}
         >
@@ -126,7 +126,7 @@ const DefaultLinkToolRender = (props: LinkToolRenderProps) => {
         </button>
         <button
           type="button"
-          className="yoopta-button ml-2 bg-[#f4f4f5] text-[#000] text-sm font-medium py-[5px] px-[10px] rounded-md shadow-sm disabled:opacity-50"
+          className="yoopta-button yoo-link-tool-ml-2 yoo-link-tool-bg-[#f4f4f5] yoo-link-tool-text-[#000] yoo-link-tool-text-sm yoo-link-tool-font-medium yoo-link-tool-py-[5px] yoo-link-tool-px-[10px] yoo-link-tool-rounded-md yoo-link-tool-shadow-sm disabled:yoo-link-tool-opacity-50"
           onClick={onDelete}
         >
           Delete link

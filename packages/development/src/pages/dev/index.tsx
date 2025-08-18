@@ -88,40 +88,6 @@ const data = {
       order: 0,
     },
   },
-  // '892e52f5-abd6-4a2f-b35d-53b3746b654c': {
-  //   id: '892e52f5-abd6-4a2f-b35d-53b3746b654c',
-  //   type: 'Callout',
-  //   meta: {
-  //     depth: 0,
-  //     order: 1,
-  //   },
-  //   value: [
-  //     {
-  //       id: 'ed73e2df-f97c-4648-b8bd-3743fe3d0984',
-  //       type: 'callout',
-  //       props: {
-  //         theme: 'info',
-  //       },
-  //       children: [
-  //         {
-  //           text: 'kekceburek',
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       id: 'asdsadadasd-f97c-4648-b8bd-3743fe3d0984',
-  //       type: 'callout',
-  //       props: {
-  //         theme: 'info',
-  //       },
-  //       children: [
-  //         {
-  //           text: 'dirty kekceburek',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
 };
 
 const BasicExample = () => {
@@ -135,15 +101,6 @@ const BasicExample = () => {
   };
 
   const onPathChange = (path: YooptaPath) => {};
-
-  // useEffect(() => {
-  // editor.withoutSavingHistory(() => {
-  //   const id = generateId();
-
-  //   editor.setEditorValue(data as YooptaContentValue);
-  //   editor.focusBlock(id);
-  // });
-  // }, []);
 
   return (
     <>

@@ -92,16 +92,17 @@ const HighlightColor = ({ editor, refs, floatingStyles, highlightColors = {} }: 
         style={floatingStyles}
         ref={refs.setFloating}
         onClick={(e: MouseEvent) => e.stopPropagation()}
-        className="z-50"
+        className="yoo-toolbar-z-50"
       >
-        <div className="bg-[#FFFFFF] p-2 rounded-md shadow-md border border-solid border-[#e5e7eb]">
+        <div className="yoo-toolbar-bg-[#FFFFFF] yoo-toolbar-p-2 yoo-toolbar-rounded-md yoo-toolbar-shadow-md yoo-toolbar-border yoo-toolbar-border-solid yoo-toolbar-border-[#e5e7eb]">
           {/* Tabs */}
-          <div className="flex space-x-2 mb-3">
+          <div className="yoo-toolbar-flex yoo-toolbar-space-x-2 yoo-toolbar-mb-3">
             <button
               type="button"
-              className={`px-3 py-1 text-sm rounded ${ tab === 'text'
-                  ? 'bg-blue-50 text-blue-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+              className={`yoo-toolbar-px-3 yoo-toolbar-py-1 yoo-toolbar-text-sm yoo-toolbar-rounded ${
+                tab === 'text'
+                  ? 'yoo-toolbar-bg-blue-50 yoo-toolbar-text-blue-600'
+                  : 'yoo-toolbar-text-gray-600 hover:yoo-toolbar-bg-gray-50'
               }`}
               onClick={() => setTab('text')}
             >
@@ -109,9 +110,10 @@ const HighlightColor = ({ editor, refs, floatingStyles, highlightColors = {} }: 
             </button>
             <button
               type="button"
-              className={`px-3 py-1 text-sm rounded ${ tab === 'background'
-                  ? 'bg-blue-50 text-blue-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+              className={`yoo-toolbar-px-3 yoo-toolbar-py-1 yoo-toolbar-text-sm yoo-toolbar-rounded ${
+                tab === 'background'
+                  ? 'yoo-toolbar-bg-blue-50 yoo-toolbar-text-blue-600'
+                  : 'yoo-toolbar-text-gray-600 hover:yoo-toolbar-bg-gray-50'
               }`}
               onClick={() => setTab('background')}
             >
@@ -120,13 +122,13 @@ const HighlightColor = ({ editor, refs, floatingStyles, highlightColors = {} }: 
           </div>
 
           {/* Presets Grid */}
-          <div className="grid justify-items-center grid-cols-5 gap-1 mb-3">
+          <div className="yoo-toolbar-grid yoo-toolbar-justify-items-center yoo-toolbar-grid-cols-5 yoo-toolbar-gap-1 yoo-toolbar-mb-3">
             {COLOR_PRESETS[tab].map(({ name, value }) => (
               <button
                 type="button"
                 key={name}
                 title={name}
-                className="w-6 h-6 rounded transition-all hover:scale-110"
+                className="yoo-toolbar-w-6 yoo-toolbar-h-6 yoo-toolbar-rounded yoo-toolbar-transition-all hover:yoo-toolbar-scale-110"
                 style={getItemStyles(tab === 'text' ? 'color' : 'backgroundColor', value)}
                 onClick={() => handleColorChange(tab === 'text' ? 'color' : 'backgroundColor', value)}
               />
@@ -134,18 +136,18 @@ const HighlightColor = ({ editor, refs, floatingStyles, highlightColors = {} }: 
           </div>
 
           {/* Custom Color Section */}
-          <div className="border-t pt-2">
+          <div className="yoo-toolbar-border-t yoo-toolbar-pt-2">
             <button
               type="button"
-              className="text-sm text-gray-600 hover:text-gray-900 flex items-center"
+              className="yoo-toolbar-text-sm yoo-toolbar-text-gray-600 hover:yoo-toolbar-text-gray-900 yoo-toolbar-flex yoo-toolbar-items-center"
               onClick={() => setShowColorPicker(!showColorPicker)}
             >
               Color Picker
-              <PaletteIcon className="w-4 h-4 ml-1" />
+              <PaletteIcon className="yoo-toolbar-w-4 yoo-toolbar-h-4 yoo-toolbar-ml-1" />
             </button>
 
             {showColorPicker && (
-              <div className="mt-2">
+              <div className="yoo-toolbar-mt-2">
                 <HexColorPicker
                   color={localColor || highlightColors?.[tab === 'text' ? 'color' : 'backgroundColor'] || '#000000'}
                   onChange={(color) => handleColorChange(tab === 'text' ? 'color' : 'backgroundColor', color, true)}

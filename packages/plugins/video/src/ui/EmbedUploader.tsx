@@ -29,23 +29,23 @@ const EmbedUploader = ({ blockId, onClose }) => {
   };
 
   const baseButtonClass =
-    'w-full user-select-none transition-bg duration-20 ease-in cursor-pointer flex items-center justify-center white-space-nowrap h-[32px] rounded-[4px] shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] bg-[rgba(254,74,85,1)] text-white leading-[1.2] px-[12px] text-[14px] font-medium';
+    'yoo-video-w-full yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-cursor-pointer yoo-video-flex yoo-video-items-center yoo-video-justify-center yoo-video-white-space-nowrap yoo-video-h-[32px] yoo-video-rounded-[4px] yoo-video-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-video-bg-[rgba(254,74,85,1)] yoo-video-text-white yoo-video-leading-[1.2] yoo-video-px-[12px] yoo-video-text-[14px] yoo-video-font-medium';
   const isEmpty = value.length === 0;
 
   return (
-    <div className="cursor-pointer user-select-none transition-bg duration-20 ease-in white-space-nowrap w-full">
+    <div className="yoo-video-cursor-pointer yoo-video-user-select-none yoo-video-transition-bg yoo-video-duration-20 yoo-video-ease-in yoo-video-white-space-nowrap yoo-video-w-full">
       <input
         type="text"
         placeholder="Paste video link"
         value={value}
-        className="items-center bg-[hsla(45,13%,94%,.6)] rounded-[4px] shadow-[inset_0_0_0_1px_hsla(0,0%,6%,.1)] cursor-text flex text-[14px] h-[32px] leading-[20px] px-[6px] mt-2 relative w-full border-none"
+        className="yoo-video-items-center yoo-video-bg-[hsla(45,13%,94%,.6)] yoo-video-rounded-[4px] yoo-video-shadow-[inset_0_0_0_1px_hsla(0,0%,6%,.1)] yoo-video-cursor-text yoo-video-flex yoo-video-text-[14px] yoo-video-h-[32px] yoo-video-leading-[20px] yoo-video-px-[6px] yoo-video-mt-2 yoo-video-relative yoo-video-w-full yoo-video-border-none"
         onChange={onChange}
       />
-      <div className="flex w-full justify-between items-center mt-2 mb-1">
+      <div className="yoo-video-flex yoo-video-w-full yoo-video-justify-between yoo-video-items-center yoo-video-mt-2 yoo-video-mb-1">
         {/* Embed Video Button */}
         <button
           type="button"
-          className={`${baseButtonClass} disabled:bg-[rgba(254,74,85,0.5)] disabled:cursor-not-allowed`}
+          className={`${baseButtonClass} disabled:yoo-video-bg-[rgba(254,74,85,0.5)] disabled:yoo-video-cursor-not-allowed`}
           disabled={isEmpty}
           onClick={embed}
         >

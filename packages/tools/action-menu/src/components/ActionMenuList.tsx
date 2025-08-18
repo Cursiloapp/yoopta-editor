@@ -357,7 +357,7 @@ const ActionMenuList = ({ items, render }: ActionMenuToolProps) => {
   if (render) {
     return (
       // [TODO] - take care about SSR
-      <Portal id="list-portal">
+      <Portal id="yoo-action-menu-list-portal">
         {isMounted && (
           <div className="yoopta-action-menu-list" style={style} ref={refs.setFloating}>
             {/* [TODO] - pass key down handler */}
@@ -369,7 +369,7 @@ const ActionMenuList = ({ items, render }: ActionMenuToolProps) => {
   }
 
   return (
-    <Portal id="list-portal">
+    <Portal id="yoo-action-menu-list-portal">
       {isMounted && (
         <div className="yoopta-action-menu-list" style={style} ref={refs.setFloating}>
           <DefaultActionMenuRender {...renderProps} actions={actions} />

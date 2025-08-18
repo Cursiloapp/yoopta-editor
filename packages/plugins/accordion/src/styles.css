@@ -1,17 +1,17 @@
 @tailwind utilities;
 
 .yoopta-accordion-list {
-  @apply p-0 m-0 my-2
+  @apply yoo-accordion-p-0 yoo-accordion-m-0 yoo-accordion-my-2
 }
 
 .yoopta-accordion-list-item {
-  @apply border border-[#525252] bg-[#303030] rounded-none relative w-full
+  @apply yoo-accordion-border yoo-accordion-border-[#525252] yoo-accordion-bg-[#303030] yoo-accordion-rounded-none yoo-accordion-relative yoo-accordion-w-full
 }
 
 .yoopta-accordion-list-item-heading {
-  @apply mb-0 relative w-full items-center border-0 rounded-none pb-4 mt-4 pt-1 pr-8 cursor-pointer relative text-base font-medium
+  @apply yoo-accordion-mb-0 yoo-accordion-relative yoo-accordion-w-full yoo-accordion-items-center yoo-accordion-border-0 yoo-accordion-rounded-none yoo-accordion-pb-4 yoo-accordion-mt-4 yoo-accordion-pt-1 yoo-accordion-pr-8 yoo-accordion-cursor-pointer yoo-accordion-relative yoo-accordion-text-base yoo-accordion-font-medium
 }
 
 .yoopta-accordion-list-item-content {
-  @apply overflow-hidden text-sm
+  @apply yoo-accordion-overflow-hidden yoo-accordion-text-sm
 }
