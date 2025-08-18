@@ -45,7 +45,8 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
       // Get the maximum width from editor container to prevent overflow
       const getMaxWidth = () => {
         if (pluginOptions?.maxSizes?.maxWidth) {
-          return pluginOptions.maxSizes.maxWidth;
+          const maxWidth = pluginOptions.maxSizes.maxWidth;
+          return typeof maxWidth === 'number' ? maxWidth : parseInt(String(maxWidth).replace(/[^\d]/g, ''), 10) || 762;
         }
         
         // Get the editor container width and subtract some padding to prevent overflow
@@ -62,7 +63,8 @@ const ImageRender = ({ extendRender, ...props }: PluginElementRenderProps) => {
       // Get the maximum height from the actual image dimensions
       const getMaxHeight = () => {
         if (pluginOptions?.maxSizes?.maxHeight) {
-          return pluginOptions.maxSizes.maxHeight;
+          const maxHeight = pluginOptions.maxSizes.maxHeight;
+          return typeof maxHeight === 'number' ? maxHeight : parseInt(String(maxHeight).replace(/[^\d]/g, ''), 10) || 900;
         }
         
         // Try to get the natural height from the image element

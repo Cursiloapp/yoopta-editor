@@ -26,13 +26,13 @@ const FileUploader = ({ accept = 'image/*', onClose, blockId, onSetLoading }: Pr
       const defaultImageProps = editor.plugins.Image.elements.image.props as ImageElementProps;
 
       const image = new window.Image();
-      image.src = data.src;
+      image.src = data.src || '';
       image.onload = () => {
         const newSizes = { width: image.naturalWidth, height: image.naturalHeight };
         const maxSizes = (editor.plugins.Image.options as ImagePluginOptions)?.maxSizes;
         const limitedSizes = limitSizes(newSizes, {
-          width: maxSizes!.maxWidth!,
-          height: maxSizes!.maxHeight!,
+          width: maxSizes?.maxWidth,
+          height: maxSizes?.maxHeight,
         });
 
         Elements.updateElement<ImagePluginElements, ImageElementProps>(editor, blockId, {
