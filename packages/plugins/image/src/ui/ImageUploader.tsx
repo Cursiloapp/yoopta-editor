@@ -16,12 +16,12 @@ const { Overlay, Portal } = UI;
 
 const ImageUploader = ({ floatingStyles, refs, onClose, blockId, onSetLoading, context, arrowRef }: Props) => {
   return (
-    <Portal id="yoo-image-uploader-portal rounded-lg">
-      <Overlay lockScroll className="yoo-image-z-[100]" onClick={onClose}>
+    <Portal id="uploader-portal rounded-lg">
+      <Overlay lockScroll className="z-[100]" onClick={onClose}>
         <div ref={refs.setFloating} style={floatingStyles} onClick={(e) => e.stopPropagation()}>
-          <div className="yoo-image-flex yoo-image-flex-col yoo-image-rounded-[6px] yoo-image-min-w-[540px] yoo-image-max-w-[calc(100vw-24px)] yoo-image-h-full yoo-image-max-h-[420px] yoo-image-bg-[#FFFFFF] yoo-image-shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
+          <div className="flex flex-col rounded-[6px] min-w-[540px] max-w-[calc(100vw-24px)] h-full max-h-[420px] bg-[#FFFFFF] shadow-[rgb(15_15_15_/5%)_0px_0px_0px_1px,_rgb(15_15_15_/10%)_0px_3px_6px,_rgb(15_15_15_/20%)_0px_9px_24px]">
             {/* File Uploader Component */}
-            <div className="yoo-image-p-[6px] yoo-image-rounded yoo-image-flex yoo-image-justify-center">
+            <div className="p-[6px] rounded flex justify-center">
               <FileUploader onClose={onClose} blockId={blockId} onSetLoading={onSetLoading} />
             </div>
           </div>

@@ -25,7 +25,7 @@ export function Loom({ provider, attributes, children, width, height }: Provider
   }, [isInViewport]);
 
   return (
-    <div {...attributes} ref={onRef} className="yoo-video-relative" style={{ width, height }}>
+    <div {...attributes} ref={onRef} className="relative" style={{ width, height }}>
       <div
         style={{
           position: 'relative',

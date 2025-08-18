@@ -19,7 +19,7 @@ const TodoListRender = ({ extendRender, ...props }: PluginElementRenderProps) =>
 
   return (
     <div
-      className={cn('yoopta-todo-list yoo-lists-group', `yoo-lists-text-${currentAlign}`, className)}
+      className={cn('yoopta-todo-list group', `text-${currentAlign}`, className)}
       data-checked={checked}
       {...htmlAttrs}
       {...attributes}

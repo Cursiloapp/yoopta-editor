@@ -45,15 +45,15 @@ const FileUploader = ({ accept = '', onClose, blockId, onSetLoading }: Props) =>
 
   // Shared button style with yoo-file prefix
   const baseButtonClass =
-    'yoo-file-w-full yoo-file-user-select-none yoo-file-transition-bg yoo-file-duration-20 yoo-file-ease-in yoo-file-cursor-pointer yoo-file-flex yoo-file-items-center yoo-file-justify-center yoo-file-white-space-nowrap yoo-file-h-[32px] yoo-file-rounded-[4px] yoo-file-shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] yoo-file-bg-[rgba(254,74,85,1)] yoo-file-text-white yoo-file-leading-[1.2] yoo-file-px-[12px] yoo-file-text-[14px] yoo-file-font-medium';
+    'w-full user-select-none transition-bg duration-20 ease-in cursor-pointer flex items-center justify-center white-space-nowrap h-[32px] rounded-[4px] shadow-[rgba(15,15,15,0.1)_0px_0px_0px_1px_inset,_rgba(15,15,15,0.1)_0px_1px_2px] bg-[rgba(254,74,85,1)] text-white leading-[1.2] px-[12px] text-[14px] font-medium';
 
   return (
-    <div className="yoo-file-w-full">
+    <div className="w-full">
       <label htmlFor="file-uploader" className={baseButtonClass}>
         <input
           type="file"
           id="file-uploader"
-          className="yoo-file-hidden"
+          className="hidden"
           accept={options?.accept || accept}
           onChange={onChange}
           multiple={false}

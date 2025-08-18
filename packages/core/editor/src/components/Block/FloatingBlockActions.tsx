@@ -196,7 +196,7 @@ export const FloatingBlockActions = memo(({ editor, dragHandleProps }: FloatingB
         <div className="yoopta-block-action-buttons">
           {isActionMenuOpen && hasActionMenu && (
             <Portal id="yoo-block-options-portal">
-              <Overlay lockScroll className="yoo-editor-z-[100]" onClick={onCloseActionMenu}>
+              <Overlay lockScroll className="z-[100]" onClick={onCloseActionMenu}>
                 <div style={actionMenuStyles} ref={actionMenuRefs.setFloating}>
                   {/* @ts-ignore - fixme */}
                   <ActionMenu {...actionMenuRenderProps} />

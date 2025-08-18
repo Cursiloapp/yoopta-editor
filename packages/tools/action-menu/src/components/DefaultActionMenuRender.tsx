@@ -35,13 +35,13 @@ const DefaultActionMenuRender = ({
 
   return (
     <div style={wrapStyles} role="listbox" className="yoopta-action-menu-list-content">
-      <div className="yoo-action-menu-max-h-[300px] yoo-action-menu-overflow-y-auto yoo-action-menu-overflow-x-hidden">
+      <div className="max-h-[300px] overflow-y-auto overflow-x-hidden">
         <div
           {...getRootProps()}
-          className="yoo-action-menu-overflow-hidden yoo-action-menu-p-0 yoo-action-menu-text-foreground"
+          className="overflow-hidden p-0 text-foreground"
         >
           {empty && (
-            <div className="yoo-action-menu-text-left yoo-action-menu-text-muted-foreground yoo-action-menu-text-xs yoo-action-menu-px-1 yoo-action-menu-py-1">
+            <div className="text-left text-muted-foreground text-xs px-1 py-1">
               No actions available
             </div>
           )}
@@ -59,18 +59,18 @@ const DefaultActionMenuRender = ({
                 type="button"
                 key={action.type}
                 {...getItemProps(action.type)}
-                className="yoopta-button yoo-action-menu-flex yoo-action-menu-w-full yoo-action-menu-cursor-pointer yoo-action-menu-items-center yoo-action-menu-space-x-2 yoo-action-menu-rounded-md yoo-action-menu-px-1 yoo-action-menu-py-1 yoo-action-menu-mb-0.5 last:yoo-action-menu-mb-0 yoo-action-menu-text-left yoo-action-menu-text-sm hover:yoo-action-menu-bg-[#f4f4f5] aria-selected:yoo-action-menu-bg-[#f0f0f0]"
+                className="yoopta-button flex w-full cursor-pointer items-center space-x-2 rounded-md px-1 py-1 mb-0.5 last:mb-0 text-left text-sm hover:bg-[#f4f4f5] aria-selected:bg-[#f0f0f0]"
               >
                 <div
                   style={iconWrapStyles}
-                  className="yoo-action-menu-flex yoo-action-menu-h-[40px] yoo-action-menu-w-[40px] yoo-action-menu-items-center yoo-action-menu-justify-center yoo-action-menu-rounded-md yoo-action-menu-border yoo-action-menu-border-solid yoo-action-menu-border-[#e5e7eb] yoo-action-menu-bg-[#FFFFFF]"
+                  className="flex h-[40px] w-[40px] items-center justify-center rounded-md border border-solid border-[#e5e7eb] bg-[#FFFFFF]"
                 >
                   {renderIcon(Icon)}
                 </div>
                 <div>
-                  <div className="yoo-action-menu-font-medium">{title}</div>
+                  <div className="font-medium">{title}</div>
                   {!isViewSmall && (
-                    <div className="yoo-action-menu-text-xs yoo-action-menu-text-muted-foreground yoo-action-menu-truncate yoo-action-menu-text-ellipsis yoo-action-menu-max-w-[200px]">
+                    <div className="text-xs text-muted-foreground truncate text-ellipsis max-w-[200px]">
                       {description}
                     </div>
                   )}

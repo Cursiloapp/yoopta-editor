@@ -256,9 +256,9 @@ const DefaultToolbarRender = ({ activeBlock, editor, toggleHoldToolbar }: Toolba
           onClick={() => onChangeModal('actionMenu', !modals.actionMenu)}
           style={getModalTriggerStyle('actionMenu')}
         >
-          <span className="yoo-toolbar-mr-0">{blockLabel}</span>
+          <span className="mr-0">{blockLabel}</span>
           {modals.actionMenu && !!ActionMenu && (
-            <Portal id="yoo-toolbar-action-menu-list-portal">
+            <Portal id="action-menu-list-portal">
               <div style={actionMenuStyles} ref={actionMenuRefs.setFloating} onClick={(e) => e.stopPropagation()}>
                 <ActionMenu {...actionMenuRenderProps} />
               </div>
@@ -279,9 +279,9 @@ const DefaultToolbarRender = ({ activeBlock, editor, toggleHoldToolbar }: Toolba
           }}
           style={getModalTriggerStyle('link')}
         >
-          <span className="yoo-toolbar-mr-0">Link</span>
+          <span className="mr-0">Link</span>
           {modals.link && !!LinkTool && (
-            <Portal id="yoo-link-tool-portal">
+            <Portal id="tool-portal">
               <Overlay lockScroll className="z-[100]" onClick={onClickLinkOverlay}>
                 <div style={linkToolStyles} ref={linkToolRefs.setFloating}>
                   <LinkTool link={linkValues} onSave={onUpdateLink} onDelete={onDeleteLink} />

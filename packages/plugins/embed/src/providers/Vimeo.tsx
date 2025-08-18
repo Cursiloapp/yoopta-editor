@@ -27,13 +27,13 @@ function Vimeo({ provider, width, height, attributes, children }: ProviderRender
   };
 
   return (
-    <div {...attributes} ref={onRef} className="yoo-embed-relative">
+    <div {...attributes} ref={onRef} className="relative">
       <img
         src={src || ''}
         alt="vimeo_embed_preview"
         width="100%"
         height="100%"
-        className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-w-full yoo-embed-h-full"
+        className="absolute top-0 left-0 w-full h-full"
         style={{
           opacity: isInViewport && isFrameLoaded ? 0 : 1,
           zIndex: isInViewport && isFrameLoaded ? -1 : 0,
@@ -47,7 +47,7 @@ function Vimeo({ provider, width, height, attributes, children }: ProviderRender
           frameBorder={0}
           allowFullScreen
           onLoad={() => setFrameLoaded(true)}
-          className="yoo-embed-absolute yoo-embed-top-0 yoo-embed-left-0 yoo-embed-rounded-[3px]"
+          className="absolute top-0 left-0 rounded-[3px]"
           width={width}
           height={height}
         />

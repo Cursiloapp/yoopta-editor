@@ -59,7 +59,7 @@ function Twitter({ provider, blockId, attributes, children, height, width }: Pro
   }, [provider.id, isInViewport, blockId, editor]);
 
   return (
-    <div className="yoo-embed-w-full" {...attributes}>
+    <div className="w-full" {...attributes}>
       <div id={elementId} ref={twitterRootRef} />
       {children}
     </div>
