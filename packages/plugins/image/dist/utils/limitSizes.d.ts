@@ -5,5 +5,8 @@ import { ImageSizes } from '../types';
  * @param maxSizes Maximum allowed dimensions
  * @returns New image dimensions that fit within maxSizes
  */
-export declare const limitSizes: (sizes: ImageSizes, maxSizes: ImageSizes) => ImageSizes;
+export declare const limitSizes: (sizes: ImageSizes, maxSizes: {
+    width?: string | number;
+    height?: string | number;
+}) => ImageSizes;
 //# sourceMappingURL=limitSizes.d.ts.map

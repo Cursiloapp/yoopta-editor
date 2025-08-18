@@ -1,18 +1,18 @@
 import{jsx as e,jsxs as t,Fragment as r}from"react/jsx-runtime";import{useYooptaEditor as n,useYooptaReadOnly as o,Elements as i,Blocks as a,generateId as s,buildBlockData as c,YooptaPlugin as l,buildBlockElementsStructure as d,serializeTextNodes as p}from"@yoopta/editor";import{forwardRef as f,createElement as u}from"react";function h(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var o=0;for(n=Object.getOwnPropertySymbols(e);o<n.length;o++)t.indexOf(n[o])<0&&Object.prototype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]])}return r}"function"==typeof SuppressedError&&SuppressedError;const m=(...e)=>e.filter(((e,t,r)=>Boolean(e)&&r.indexOf(e)===t)).join(" ")
 /**
- * @license lucide-react v0.378.0 - ISC
+ * @license lucide-react v0.453.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */;var g={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};
 /**
- * @license lucide-react v0.378.0 - ISC
+ * @license lucide-react v0.453.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const v=f((({color:e="currentColor",size:t=24,strokeWidth:r=2,absoluteStrokeWidth:n,className:o="",children:i,iconNode:a,...s},c)=>u("svg",{ref:c,...g,width:t,height:t,stroke:e,strokeWidth:n?24*Number(r)/Number(t):r,className:m("lucide",o),...s},[...a.map((([e,t])=>u(e,t))),...Array.isArray(i)?i:[i]]))),y=(e,t)=>{const r=f((({className:r,...n},o)=>{return u(v,{ref:o,iconNode:t,className:m(`lucide-${i=e,i.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`,r),...n});var i}));return r.displayName=`${e}`,r},b=y("ChevronUp",[["path",{d:"m18 15-6-6-6 6",key:"153udz"}]]),w=y("ListCollapse",[["path",{d:"m3 10 2.5-2.5L3 5",key:"i6eama"}],["path",{d:"m3 19 2.5-2.5L3 14",key:"w2gmor"}],["path",{d:"M10 6h11",key:"c7qv1k"}],["path",{d:"M10 12h11",key:"6m4ad9"}],["path",{d:"M10 18h11",key:"11hvi2"}]]),_=y("Plus",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"M12 5v14",key:"s699le"}]]),O=y("Trash",[["path",{d:"M3 6h18",key:"d0wm0j"}],["path",{d:"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6",key:"4alrt4"}],["path",{d:"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2",key:"v07s0e"}]]);
 /**
- * @license lucide-react v0.378.0 - ISC
+ * @license lucide-react v0.453.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
